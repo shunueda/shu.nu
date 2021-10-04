@@ -23,6 +23,10 @@
     "./src/**/*.{ts,js,jsx,tsx}": []
   },
   "dependencies": {
+    "@material-ui/core": "^4.12.3",
+    "@material-ui/icons": "^4.11.2",
+    "better-sqlite3": "^7.4.3",
+    "mui-datatables": "^3.7.8",
     "next": "11.1.2",
     "react": "17.0.2",
     "react-dom": "17.0.2",
@@ -31,6 +35,7 @@
   "devDependencies": {
     "@commitlint/cli": "13.1.0",
     "@commitlint/config-conventional": "13.1.0",
+    "@types/mui-datatables": "^3.7.7",
     "@types/node": "14.17.15",
     "@types/react": "17.0.21",
     "@types/react-dom": "17.0.9",
