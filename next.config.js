@@ -1,3 +1,6 @@
-module.exports = {
-  reactStrictMode: true,
-};
+module.exports = (phase, { defaultConfig }) => {
+  /**
+   * @type {import('next').NextConfig}
+   */
+  return {}
+}
