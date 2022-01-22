@@ -8534,9 +8534,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"root@workspace:root":
+"root@workspace:domains/root":
   version: 0.0.0-use.local
-  resolution: "root@workspace:root"
+  resolution: "root@workspace:domains/root"
   dependencies:
     "@types/node": 14.17.4
     "@types/react": 17.0.13
