@@ -1,3 +1,8 @@
 export default function Home() {
-  return <></>
+  console.log(3)
+  return (
+    <>
+      <p>Hello!</p>
+    </>
+  )
 }
