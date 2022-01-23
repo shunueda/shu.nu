@@ -9938,7 +9938,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:17.0.2"],
             ["sass", "npm:1.49.0"],
-            ["typescript", "patch:typescript@npm%3A3.9.10#~builtin<compat/typescript>::version=3.9.10&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
           ],
           "linkType": "SOFT",
         }]

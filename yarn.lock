@@ -8544,7 +8544,7 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     sass: ^1.35.2
-    typescript: ^3.7.2
+    typescript: latest
   languageName: unknown
   linkType: soft
 
@@ -9749,7 +9749,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:^4.4.3":
+"typescript@npm:^4.4.3, typescript@npm:latest":
   version: 4.5.5
   resolution: "typescript@npm:4.5.5"
   bin:
@@ -9769,7 +9769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@^4.4.3#~builtin<compat/typescript>, typescript@patch:typescript@latest#~builtin<compat/typescript>":
   version: 4.5.5
   resolution: "typescript@patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"
   bin:
