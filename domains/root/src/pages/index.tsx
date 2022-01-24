@@ -1,8 +1,12 @@
+import Navbar from '~/src/components/navbar'
+import styles from './index.module.scss'
+
 export default function Home() {
-  console.log(3)
   return (
-    <>
-      <p>Hello!</p>
-    </>
+    <div className={styles.root}>
+      <div className={styles.navbar}>
+        <Navbar />
+      </div>
+    </div>
   )
 }
