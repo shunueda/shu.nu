@@ -3123,6 +3123,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["bootstrap", [
+        ["npm:5.1.3", {
+          "packageLocation": "./.yarn/cache/bootstrap-npm-5.1.3-691fdc19a6-301b5ed872.zip/node_modules/bootstrap/",
+          "packageDependencies": [
+            ["bootstrap", "npm:5.1.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:5.1.3", {
+          "packageLocation": "./.yarn/__virtual__/bootstrap-virtual-2647efbfc1/0/cache/bootstrap-npm-5.1.3-691fdc19a6-301b5ed872.zip/node_modules/bootstrap/",
+          "packageDependencies": [
+            ["bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:5.1.3"],
+            ["@popperjs/core", null],
+            ["@types/popperjs__core", null]
+          ],
+          "packagePeers": [
+            "@popperjs/core",
+            "@types/popperjs__core"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["brace-expansion", [
         ["npm:1.1.11", {
           "packageLocation": "./.yarn/cache/brace-expansion-npm-1.1.11-fb95eb05ad-faf34a7bb0.zip/node_modules/brace-expansion/",
@@ -3455,6 +3477,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["define-property", "npm:0.2.5"],
             ["isobject", "npm:3.0.1"],
             ["static-extend", "npm:0.1.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["classnames", [
+        ["npm:2.3.1", {
+          "packageLocation": "./.yarn/cache/classnames-npm-2.3.1-f2ae0a8d3c-14db8889d5.zip/node_modules/classnames/",
+          "packageDependencies": [
+            ["classnames", "npm:2.3.1"]
           ],
           "linkType": "HARD",
         }]
@@ -9934,6 +9965,8 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["root", "workspace:domains/root"],
             ["@types/node", "npm:14.17.4"],
             ["@types/react", "npm:17.0.13"],
+            ["bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:5.1.3"],
+            ["classnames", "npm:2.3.1"],
             ["next", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:12.0.8"],
             ["react", "npm:17.0.2"],
             ["react-dom", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:17.0.2"],

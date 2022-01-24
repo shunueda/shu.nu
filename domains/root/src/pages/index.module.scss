@@ -1,5 +1,23 @@
 .root {
+  height: 30em;
+
   .navbar {
-    padding: 1em;
+    padding: 2em;
+  }
+
+  .body {
+    display: flex;
+    height: 30vw;
+    margin-left: calc(-1 * calc(100vw - 100%) / 2);
+    width: 100vw;
+
+    * {
+      flex: 1 0 100%;
+
+      * {
+        height: 100%;
+        width: 100%;
+      }
+    }
   }
 }

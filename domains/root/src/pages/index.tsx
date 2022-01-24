@@ -1,11 +1,22 @@
 import Navbar from '~/src/components/navbar'
-import styles from './index.module.scss'
+import classes from '~/src/pages/index.module.scss'
 
 export default function Home() {
   return (
-    <div className={styles.root}>
-      <div className={styles.navbar}>
+    <div className={`container ${classes.root}`}>
+      <div className={classes.navbar}>
         <Navbar />
+      </div>
+      <div className={classes.body}>
+        <section>
+          <div style={{ background: 'red' }} />
+        </section>
+        <section>
+          <div style={{ background: 'green' }} />
+        </section>
+        <section>
+          <div style={{ background: 'yellow' }} />
+        </section>
       </div>
     </div>
   )

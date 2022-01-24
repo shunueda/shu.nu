@@ -1,18 +1,14 @@
 .root {
-  align-items: center;
-  display: flex;
-  height: 3em;
-  justify-content: center;
-
-  span {
-    border-radius: 0.3em;
-    border-style: solid;
-    color: #565656;
-    cursor: pointer;
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.2em;
-    font-weight: 600;
-    margin: 1em;
-    padding: 0.6em 1em;
+  .box {
+    .text {
+      cursor: pointer;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.1em;
+      margin-bottom: auto;
+      margin-top: auto;
+      text-align: center;
+      text-transform: uppercase;
+      transition: color 0.5s;
+    }
   }
 }

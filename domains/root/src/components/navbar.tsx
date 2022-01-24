@@ -1,29 +1,36 @@
-import { useState } from 'react'
-import styles from './navbar.module.scss'
+import { useEffect, useState } from 'react'
+import classes from './navbar.module.scss'
 
 export default function Navbar() {
-  const [currPage, setPage] = useState(0)
+  const [hash, setHash] = useState('')
+  useEffect(() => {
+    window.onhashchange = () => {
+      setHash(window.location.hash.substring(1))
+    }
+  }, [])
   return (
     <>
-      <div className={styles.root}>
-        {['0', '1', '2', '3', '4'].map((item, index) => {
-          return (
-            <div
-              key={item}
-              onClick={() => {
-                setPage(index)
-              }}
-            >
-              <span
-                style={{
-                  borderColor: currPage === index ? 'black' : 'transparent'
-                }}
+      <div className={`${classes.root} row`}>
+        {['home', 'skills', 'experiences', 'projects', 'conctacts'].map(
+          (item, index) => {
+            return (
+              <div
+                key={item}
+                className={`${classes.box} col-md content content__item`}
               >
-                {item}
-              </span>
-            </div>
-          )
-        })}
+                <a
+                  className={`${classes.text} link link--kale`}
+                  href={`/#${item}`}
+                  style={{
+                    color: hash === item ? '#000000' : '#d3d3d3'
+                  }}
+                >
+                  {item}
+                </a>
+              </div>
+            )
+          }
+        )}
       </div>
     </>
   )
