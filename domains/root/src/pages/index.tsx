@@ -1,37 +1,29 @@
 import Navbar from 'components/navbar'
+import Slider from 'components/slider'
 import classes from 'pages/index.module.scss'
 import { useEffect, useState } from 'react'
+import { getPages } from '~/src/util/getPages'
 
 export default function Home() {
-  const sections = ['home', 'skills', 'experiences', 'projects', 'contacts']
   const [hash, setHash] = useState('')
+  const [pages, setPages] = useState([])
   useEffect(() => {
+    getPages().then(setPages)
     if (!window.location.hash) {
-      window.location.hash = sections[0]
+      window.location.hash = 'home'
+    } else {
+      setHash(window.location.hash.substring(1))
     }
     window.onhashchange = () => {
       setHash(window.location.hash.substring(1))
     }
-  }, [sections])
+  }, [])
   return (
     <div className={`container ${classes.root}`}>
       <div className={classes.navbar}>
-        <Navbar sections={sections} hash={hash} />
+        <Navbar pages={pages} hash={hash} />
       </div>
-      <div
-        className={classes.body}
-        style={{
-          marginLeft: `calc(calc(-1 * calc(100vw - 100%) / 2) - ${sections.indexOf(
-            hash
-          )}00vw)`
-        }}
-      >
-        {/*<section>*/}
-        {/*  <div style={{ background: 'red' }} className='container'>*/}
-        {/*    HOME*/}
-        {/*  </div>*/}
-        {/*</section>*/}
-      </div>
+      <Slider pages={pages} hash={hash} />
     </div>
   )
 }

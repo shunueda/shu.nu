@@ -1,28 +1,29 @@
+import { Page } from '~/src/types'
 import classes from './navbar.module.scss'
 
 interface Props {
-  sections: string[]
+  pages: Page[]
   hash: string
 }
 
-export default function Navbar({ sections, hash }: Props) {
+export default function Navbar({ pages, hash }: Props) {
   return (
     <>
       <div className={`${classes.root} row`}>
-        {sections.map((item, index) => {
+        {pages.map(({ title }) => {
           return (
             <div
-              key={item}
+              key={title}
               className={`${classes.box} col-md content content__item`}
             >
               <a
                 className={`${classes.text} link link--kale`}
-                href={`/#${item}`}
+                href={`/#${title}`}
                 style={{
-                  color: hash === item ? '#000000' : '#d3d3d3'
+                  color: hash === title ? '#000000' : '#d3d3d3'
                 }}
               >
-                {item}
+                {title}
               </a>
             </div>
           )
