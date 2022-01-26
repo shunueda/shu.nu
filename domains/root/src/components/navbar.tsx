@@ -12,10 +12,7 @@ export default function Navbar({ pages, hash }: Props) {
       <div className={`${classes.root} row`}>
         {pages.map(({ title }) => {
           return (
-            <div
-              key={title}
-              className={`${classes.box} col-md content content__item`}
-            >
+            <div key={title} className={`${classes.box} col-md content__item`}>
               <a
                 className={`${classes.text} link link--kale`}
                 href={`/#${title}`}
