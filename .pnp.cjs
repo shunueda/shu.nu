@@ -898,6 +898,76 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@prismicio/client", [
+        ["npm:6.1.0", {
+          "packageLocation": "./.yarn/cache/@prismicio-client-npm-6.1.0-cc249ad8bf-138c00e7d7.zip/node_modules/@prismicio/client/",
+          "packageDependencies": [
+            ["@prismicio/client", "npm:6.1.0"],
+            ["@prismicio/helpers", "npm:2.0.0"],
+            ["@prismicio/types", "npm:0.1.21"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@prismicio/helpers", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@prismicio-helpers-npm-2.0.0-6d1c77ad84-1bf3c07383.zip/node_modules/@prismicio/helpers/",
+          "packageDependencies": [
+            ["@prismicio/helpers", "npm:2.0.0"],
+            ["@prismicio/richtext", "npm:2.0.0"],
+            ["@prismicio/types", "npm:0.1.21"],
+            ["escape-html", "npm:1.0.3"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@prismicio/react", [
+        ["npm:2.0.3", {
+          "packageLocation": "./.yarn/cache/@prismicio-react-npm-2.0.3-d1b840f1ab-92c0e8f115.zip/node_modules/@prismicio/react/",
+          "packageDependencies": [
+            ["@prismicio/react", "npm:2.0.3"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.0.3", {
+          "packageLocation": "./.yarn/__virtual__/@prismicio-react-virtual-acbaf23ccd/0/cache/@prismicio-react-npm-2.0.3-d1b840f1ab-92c0e8f115.zip/node_modules/@prismicio/react/",
+          "packageDependencies": [
+            ["@prismicio/react", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.0.3"],
+            ["@prismicio/client", "npm:6.1.0"],
+            ["@prismicio/helpers", "npm:2.0.0"],
+            ["@prismicio/richtext", "npm:2.0.0"],
+            ["@types/prismicio__client", null],
+            ["@types/react", "npm:17.0.13"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@prismicio/client",
+            "@types/prismicio__client",
+            "@types/react",
+            "react"
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@prismicio/richtext", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@prismicio-richtext-npm-2.0.0-d15ebb0957-b1092557c3.zip/node_modules/@prismicio/richtext/",
+          "packageDependencies": [
+            ["@prismicio/richtext", "npm:2.0.0"],
+            ["@prismicio/types", "npm:0.1.21"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@prismicio/types", [
+        ["npm:0.1.21", {
+          "packageLocation": "./.yarn/cache/@prismicio-types-npm-0.1.21-9c1ac7569d-3d7c3a192c.zip/node_modules/@prismicio/types/",
+          "packageDependencies": [
+            ["@prismicio/types", "npm:0.1.21"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@react-aria/ssr", [
         ["npm:3.1.0", {
           "packageLocation": "./.yarn/cache/@react-aria-ssr-npm-3.1.0-b2e15e5c41-ae376d45db.zip/node_modules/@react-aria/ssr/",
@@ -1112,6 +1182,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-json5-npm-0.0.29-f63a7916bd-e60b153664.zip/node_modules/@types/json5/",
           "packageDependencies": [
             ["@types/json5", "npm:0.0.29"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/lodash", [
+        ["npm:4.14.178", {
+          "packageLocation": "./.yarn/cache/@types-lodash-npm-4.14.178-5433b9ed68-a69a04a60b.zip/node_modules/@types/lodash/",
+          "packageDependencies": [
+            ["@types/lodash", "npm:4.14.178"]
           ],
           "linkType": "HARD",
         }]
@@ -4624,6 +4703,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/escalade-npm-3.1.1-e02da076aa-a3e2a99f07.zip/node_modules/escalade/",
           "packageDependencies": [
             ["escalade", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["escape-html", [
+        ["npm:1.0.3", {
+          "packageLocation": "./.yarn/cache/escape-html-npm-1.0.3-376c22ee74-6213ca9ae0.zip/node_modules/escape-html/",
+          "packageDependencies": [
+            ["escape-html", "npm:1.0.3"]
           ],
           "linkType": "HARD",
         }]
@@ -10216,16 +10304,23 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./domains/root/",
           "packageDependencies": [
             ["root", "workspace:domains/root"],
+            ["@prismicio/client", "npm:6.1.0"],
+            ["@prismicio/helpers", "npm:2.0.0"],
+            ["@prismicio/react", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.0.3"],
+            ["@prismicio/types", "npm:0.1.21"],
+            ["@types/lodash", "npm:4.14.178"],
             ["@types/node", "npm:14.17.4"],
             ["@types/react", "npm:17.0.13"],
             ["bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:5.1.3"],
             ["classnames", "npm:2.3.1"],
+            ["lodash", "npm:4.17.21"],
             ["next", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:12.0.8"],
             ["react", "npm:17.0.2"],
             ["react-bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.1.1"],
             ["react-dom", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:17.0.2"],
             ["sass", "npm:1.49.0"],
-            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"]
+            ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
+            ["use-async-effect", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.2.5"]
           ],
           "linkType": "SOFT",
         }]
@@ -11837,6 +11932,28 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/use-npm-3.1.1-7ba643714c-08a130289f.zip/node_modules/use/",
           "packageDependencies": [
             ["use", "npm:3.1.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["use-async-effect", [
+        ["npm:2.2.5", {
+          "packageLocation": "./.yarn/cache/use-async-effect-npm-2.2.5-fc447cdb44-69cdaecbcb.zip/node_modules/use-async-effect/",
+          "packageDependencies": [
+            ["use-async-effect", "npm:2.2.5"]
+          ],
+          "linkType": "SOFT",
+        }],
+        ["virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.2.5", {
+          "packageLocation": "./.yarn/__virtual__/use-async-effect-virtual-a89683e77d/0/cache/use-async-effect-npm-2.2.5-fc447cdb44-69cdaecbcb.zip/node_modules/use-async-effect/",
+          "packageDependencies": [
+            ["use-async-effect", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.2.5"],
+            ["@types/react", "npm:17.0.13"],
+            ["react", "npm:17.0.2"]
+          ],
+          "packagePeers": [
+            "@types/react",
+            "react"
           ],
           "linkType": "HARD",
         }]

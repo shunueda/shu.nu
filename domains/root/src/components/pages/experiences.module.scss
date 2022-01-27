@@ -1,0 +1,88 @@
+.root {
+  div > div {
+    .card {
+      background: #000;
+    }
+
+    &:first-child > div {
+      margin-left: auto;
+    }
+
+    &:last-child > div {
+      margin-right: auto;
+    }
+  }
+}
+
+.card {
+  background-size: cover;
+  border: #111 1px solid;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto', sans-serif;
+  height: 17em;
+  padding: 1em;
+  width: 17em;
+
+
+  div {
+    text-align: left;
+
+    width: 100%;
+
+
+    &:first-child {
+      align-items: flex-start;
+      display: flex;
+      flex: 1 0 auto;
+      flex-direction: column;
+      justify-content: flex-start;
+
+      * {
+        text-align: left;
+        width: 100%;
+      }
+    }
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+
+  * {
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1 {
+    font-family: Roboto, serif;
+    font-weight: 700;
+
+  }
+
+  h2 {
+    font-size: 1em;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+  }
+
+  h4 {
+    cursor: pointer;
+    font-size: 1em;
+    margin-top: auto;
+
+    a {
+      color: #e5e5e5;
+    }
+  }
+}
+
+.open {
+  background: #e0e0e0;
+  height: 17em;
+  width: 17em;
+}

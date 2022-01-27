@@ -1,5 +1,12 @@
 import classes from './footer.module.scss'
 
 export default function Footer() {
-  return <div className={classes.root}>Credit: Shun Ueda</div>
+  return (
+    <section className={classes.root}>
+      <div>© {new Date().getFullYear()} Shun Ueda. All rights reserved.</div>
+      <div>
+        <a href=''>Privacy Policy</a>
+      </div>
+    </section>
+  )
 }

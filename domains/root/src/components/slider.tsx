@@ -11,7 +11,7 @@ interface Props {
 export default function Slider({ pages, hash, style }: Props) {
   const [transition, setTransition] = useState(true)
   useEffect(() => {
-    let debounce
+    let debounce: any
     window.onresize = () => {
       if (transition) setTransition(false)
       clearTimeout(debounce)

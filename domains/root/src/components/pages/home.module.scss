@@ -20,12 +20,13 @@
 .contact {
   display: inline-block;
   margin-top: -5%;
-  transform: rotate(-10deg);
+  transform: rotate(-12.5deg);
 
   a {
-    color: #3d3d3d;
+    color: #a9a9a9;
     font-family: 'Oooh Baby', cursive;
-    font-size: 1.3em;
+    font-size: 1.25em;
+    font-weight: 600;
     text-transform: capitalize;
   }
 }
@@ -40,7 +41,7 @@
   }
 
   h1 {
-    background: linear-gradient(60deg, #35b0b0, #6f18d2);
+    background: linear-gradient(60deg, #e78bb9, #3e65bb);
     background-clip: text;
     font-family: 'Roboto', sans-serif;
     font-size: 4em;

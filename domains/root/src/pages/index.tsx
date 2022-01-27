@@ -1,16 +1,33 @@
 import Navbar from 'components/navbar'
 import Slider from 'components/slider'
 import classes from 'pages/index.module.scss'
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
+import useAsyncEffect from 'use-async-effect'
 import Footer from '~/src/components/footer'
-import { getPages } from '~/src/util/getPages'
+import { Page } from '~/src/types'
 
 export default function Home() {
   const [hash, setHash] = useState('')
-  const [pages, setPages] = useState([])
+  const [pages, setPages] = useState<Page[]>([])
   const [subComponentHeight, setSubComponentHeight] = useState(0)
-  useEffect(() => {
-    getPages().then(setPages)
+  useAsyncEffect(async () => {
+    const res = await fetch('/api/getPageTitles')
+    const titles = (await res.json()) as string[]
+    setPages(
+      (await Promise.all(
+        titles.map(async title => {
+          const LazyBody = lazy(() => import(`components/pages/${title}.tsx`))
+          return {
+            title: title,
+            body: (
+              <Suspense fallback={<></>}>
+                <LazyBody />
+              </Suspense>
+            )
+          }
+        })
+      )) as Page[]
+    )
     if (!window.location.hash) {
       window.location.hash = 'home'
     } else {
@@ -20,7 +37,6 @@ export default function Home() {
       setHash(window.location.hash.substring(1))
     }
     window.addEventListener('resize', handleResize)
-    handleResize()
 
     function handleResize() {
       setSubComponentHeight(
@@ -32,6 +48,13 @@ export default function Home() {
           .reduce((prev, curr) => prev + curr, 0)
       )
     }
+
+    const resizer = setInterval(() => {
+      handleResize()
+    })
+    setTimeout(() => {
+      clearTimeout(resizer)
+    }, 100)
 
     return () => {
       window.removeEventListener('resize', handleResize)
