@@ -1,6 +1,7 @@
-const { readdirSync, writeFileSync } = require('fs')
+const { readdirSync, writeFileSync, mkdirSync } = require('fs')
 
 module.exports = () => {
+  mkdirSync('src/assets', { recursive: true })
   writeFileSync(
     'src/assets/page_titles.json',
     JSON.stringify([
