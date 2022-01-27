@@ -7,13 +7,13 @@ import { client } from '~/src/util/prismic'
 import classes from './experiences.module.scss'
 
 export default function Experiences() {
-  const [body, setBody] = useState(<></>)
+  const [body, setBody] = useState<JSX.Element[]>([<></>])
 
   useAsyncEffect(async () => {
     const { results } = await client.getByType('experiences')
     setBody(
       chunk(
-        results[0].data.group.map(
+        (results[0]?.data?.group as Experience[]).map(
           ({ company, duration, link, position }: Experience) => {
             return (
               <div className={'col-md'} key={company}>
@@ -54,7 +54,7 @@ export default function Experiences() {
                 ]}
           </div>
         </>
-      ))
+      )) as JSX.Element[]
     )
   }, [])
   return <div className={`container-fluid ${classes.root}`}>{body}</div>
