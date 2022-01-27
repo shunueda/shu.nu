@@ -11,8 +11,7 @@ export default function Home() {
   const [pages, setPages] = useState<Page[]>([])
   const [subComponentHeight, setSubComponentHeight] = useState(0)
   useAsyncEffect(async () => {
-    const res = await fetch('/api/getPageTitles')
-    const titles = (await res.json()) as string[]
+    const titles = ['home', 'experiences', 'contact']
     setPages(
       (await Promise.all(
         titles.map(async title => {
