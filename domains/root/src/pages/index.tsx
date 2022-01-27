@@ -1,7 +1,9 @@
+import titles from 'assets/page_titles.json'
 import Navbar from 'components/navbar'
 import Slider from 'components/slider'
+import dynamic from 'next/dynamic'
 import classes from 'pages/index.module.scss'
-import { lazy, Suspense, useState } from 'react'
+import { useState } from 'react'
 import useAsyncEffect from 'use-async-effect'
 import Footer from '~/src/components/footer'
 import { Page } from '~/src/types'
@@ -11,18 +13,13 @@ export default function Home() {
   const [pages, setPages] = useState<Page[]>([])
   const [subComponentHeight, setSubComponentHeight] = useState(0)
   useAsyncEffect(async () => {
-    const titles = ['home', 'experiences', 'contact']
     setPages(
       (await Promise.all(
-        titles.map(async title => {
-          const LazyBody = lazy(() => import(`components/pages/${title}.tsx`))
+        (titles as string[]).map(async title => {
+          const Dynamic = dynamic(() => import(`components/pages/${title}.tsx`))
           return {
             title: title,
-            body: (
-              <Suspense fallback={<></>}>
-                <LazyBody />
-              </Suspense>
-            )
+            body: <Dynamic />
           }
         })
       )) as Page[]

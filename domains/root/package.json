@@ -4,7 +4,7 @@
   "private": true,
   "description": "https://shu.nu",
   "scripts": {
-    "build": "next build",
+    "build": "node scripts && next build",
     "dev": "next",
     "clean": "next clean",
     "start": "next start",
