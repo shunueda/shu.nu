@@ -552,6 +552,34 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/inter@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@fontsource/inter@npm:4.5.1"
+  checksum: 53c1288366682887a763596c251021f19eb82a203144bf3050e97f915fab2eece1615a69f6a6ee9bbbfc2a86577f938798da9951b91ada231f5cb7a9d470685d
+  languageName: node
+  linkType: hard
+
+"@fontsource/lato@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "@fontsource/lato@npm:4.5.0"
+  checksum: 6fafd09f4e0f9acecc4fe26f2c8dd3f17b7b410eeff614476ca906f60c0e7a5d7aa9892c387c8069925d901fdc95b48c8b5188791bc96af98e807ffb170ae6c6
+  languageName: node
+  linkType: hard
+
+"@fontsource/open-sans@npm:^4.5.2":
+  version: 4.5.2
+  resolution: "@fontsource/open-sans@npm:4.5.2"
+  checksum: 35b95065bc475f06369ca84d95f6b6a716d9fb29c6584f9b7a6fb3c38f77d8afb0328cea43ce1780e000f85e11f451eeb62a14d3db6a10a159c2e4a370612ae0
+  languageName: node
+  linkType: hard
+
+"@fontsource/roboto@npm:^4.5.1":
+  version: 4.5.1
+  resolution: "@fontsource/roboto@npm:4.5.1"
+  checksum: dddc5b883e0355096ebb8944a6ad8ec5fec583482e96b22c2b2b7e83d3a538a85586c379b9471db117f934bfcea981c273c153bdf55a33f5c44a39837dc6fa97
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -994,6 +1022,13 @@ __metadata:
   version: 0.16.2
   resolution: "@types/scheduler@npm:0.16.2"
   checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+  languageName: node
+  linkType: hard
+
+"@types/string-format@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "@types/string-format@npm:2.0.0"
+  checksum: 4dc201432dd70463d03e76de69347c14b615798b0846bf6e92799a20b173f07e91c1b8c9cdec9e77f837a4f18e538cbf369e8138fde9552c7ba2d4cd414b1ddc
   languageName: node
   linkType: hard
 
@@ -8783,6 +8818,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root@workspace:domains/root"
   dependencies:
+    "@fontsource/inter": ^4.5.1
+    "@fontsource/lato": ^4.5.0
+    "@fontsource/open-sans": ^4.5.2
+    "@fontsource/roboto": ^4.5.1
     "@prismicio/client": ^6.1.0
     "@prismicio/helpers": ^2.0.0
     "@prismicio/react": ^2.0.3
@@ -8790,6 +8829,7 @@ __metadata:
     "@types/lodash": ^4.14.178
     "@types/node": 14.17.4
     "@types/react": 17.0.13
+    "@types/string-format": ^2.0.0
     bootstrap: ^5.1.3
     classnames: ^2.3.1
     lodash: ^4.17.21
@@ -8798,6 +8838,7 @@ __metadata:
     react-bootstrap: ^2.1.1
     react-dom: ^17.0.2
     sass: ^1.35.2
+    string-format: ^2.0.0
     typescript: latest
     use-async-effect: ^2.2.5
   languageName: unknown
@@ -9295,6 +9336,13 @@ __metadata:
     inherits: ~2.0.4
     readable-stream: ^3.5.0
   checksum: 4c47ef64d6f03815a9ca3874e2319805e8e8a85f3550776c47ce523b6f4c6cd57f40e46ec6a9ab8ad260fde61863c2718f250d3bedb3fe9052444eb9abfd9921
+  languageName: node
+  linkType: hard
+
+"string-format@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "string-format@npm:2.0.0"
+  checksum: dada2ef95f6d36c66562c673d95315f80457fa7dce2f3609a2e75d1190b98c88319028cf0a5b6c043d01c18d581b2641579f79480584ba030d6ac6fceb30bc55
   languageName: node
   linkType: hard
 

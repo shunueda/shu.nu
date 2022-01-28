@@ -37,22 +37,20 @@ export default function Home() {
     function handleResize() {
       setSubComponentHeight(
         [classes.navbar, classes.footer]
-          .map(
-            className =>
-              document.getElementsByClassName(className)[0].clientHeight
-          )
+          .map(className => {
+            return document.getElementsByClassName(className)[0].clientHeight
+          })
           .reduce((prev, curr) => prev + curr, 0)
       )
     }
 
-    const resizer = setInterval(() => {
-      handleResize()
-    })
+    const resizer = setInterval(handleResize)
     setTimeout(() => {
       clearTimeout(resizer)
     }, 100)
 
     return () => {
+      clearTimeout(resizer)
       window.removeEventListener('resize', handleResize)
     }
   }, [])

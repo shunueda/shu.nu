@@ -1,0 +1,58 @@
+@import 'bootstrap/scss/_functions';
+@import 'bootstrap/scss/_variables';
+@import 'bootstrap/scss/_mixins';
+@import 'bootstrap/scss/_grid';
+
+
+.root {
+  width: 65%;
+
+  .row > div {
+    &:last-child {
+      div,
+      h1 {
+        margin-left: auto;
+      }
+    }
+  }
+
+  div > div {
+    div {
+      transition: 1s;
+    }
+
+    .clip {
+      background: #111;
+      height: 85%;
+      padding: 5px;
+      width: 85%;
+    }
+
+    .clip > .inner {
+      height: 100%;
+      width: 100%;
+
+      img {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.card {
+  filter: brightness(0.4);
+  transition: transform ease-in-out 0.5s, filter ease-in-out 0.5s;
+
+  &:hover {
+    filter: brightness(1);
+    transform: scale(1.1);
+  }
+
+  h1 {
+    display: inline-block;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5em;
+    font-weight: 700;
+  }
+}

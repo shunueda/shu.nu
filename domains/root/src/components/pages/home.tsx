@@ -11,8 +11,8 @@ export default function Home() {
           <h2>Full Stack Dev @ Lehigh</h2>
           <h1>Shun Ueda</h1>
           <div className={`content__item ${classes.contact}`}>
-            <a className={`link link--carme`}>
-              Contact Me →
+            <a className={`link link--carme`} href={'/#contact'}>
+              Say Hello →
               <svg
                 className='link__graphic link__graphic--stroke link__graphic--scribble'
                 width='100%'

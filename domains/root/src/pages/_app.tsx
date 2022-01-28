@@ -1,3 +1,7 @@
+import '@fontsource/inter'
+import '@fontsource/lato'
+import '@fontsource/open-sans'
+import '@fontsource/roboto'
 import 'bootstrap/dist/css/bootstrap.css'
 import type { AppProps } from 'next/app'
 import 'styles/font.scss'

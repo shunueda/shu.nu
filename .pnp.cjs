@@ -684,6 +684,42 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["@fontsource/inter", [
+        ["npm:4.5.1", {
+          "packageLocation": "./.yarn/cache/@fontsource-inter-npm-4.5.1-aa885f16e6-53c1288366.zip/node_modules/@fontsource/inter/",
+          "packageDependencies": [
+            ["@fontsource/inter", "npm:4.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@fontsource/lato", [
+        ["npm:4.5.0", {
+          "packageLocation": "./.yarn/cache/@fontsource-lato-npm-4.5.0-f1bea6530d-6fafd09f4e.zip/node_modules/@fontsource/lato/",
+          "packageDependencies": [
+            ["@fontsource/lato", "npm:4.5.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@fontsource/open-sans", [
+        ["npm:4.5.2", {
+          "packageLocation": "./.yarn/cache/@fontsource-open-sans-npm-4.5.2-9b64b6b7e3-35b95065bc.zip/node_modules/@fontsource/open-sans/",
+          "packageDependencies": [
+            ["@fontsource/open-sans", "npm:4.5.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@fontsource/roboto", [
+        ["npm:4.5.1", {
+          "packageLocation": "./.yarn/cache/@fontsource-roboto-npm-4.5.1-9f50f7d7cc-dddc5b883e.zip/node_modules/@fontsource/roboto/",
+          "packageDependencies": [
+            ["@fontsource/roboto", "npm:4.5.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["@gar/promisify", [
         ["npm:1.1.2", {
           "packageLocation": "./.yarn/cache/@gar-promisify-npm-1.1.2-2343f94380-d05081e088.zip/node_modules/@gar/promisify/",
@@ -1294,6 +1330,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@types-scheduler-npm-0.16.2-ba3a7d8c68-b6b4dcfeae.zip/node_modules/@types/scheduler/",
           "packageDependencies": [
             ["@types/scheduler", "npm:0.16.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@types/string-format", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/@types-string-format-npm-2.0.0-0603327b95-4dc201432d.zip/node_modules/@types/string-format/",
+          "packageDependencies": [
+            ["@types/string-format", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
@@ -10304,6 +10349,10 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./domains/root/",
           "packageDependencies": [
             ["root", "workspace:domains/root"],
+            ["@fontsource/inter", "npm:4.5.1"],
+            ["@fontsource/lato", "npm:4.5.0"],
+            ["@fontsource/open-sans", "npm:4.5.2"],
+            ["@fontsource/roboto", "npm:4.5.1"],
             ["@prismicio/client", "npm:6.1.0"],
             ["@prismicio/helpers", "npm:2.0.0"],
             ["@prismicio/react", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.0.3"],
@@ -10311,6 +10360,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@types/lodash", "npm:4.14.178"],
             ["@types/node", "npm:14.17.4"],
             ["@types/react", "npm:17.0.13"],
+            ["@types/string-format", "npm:2.0.0"],
             ["bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:5.1.3"],
             ["classnames", "npm:2.3.1"],
             ["lodash", "npm:4.17.21"],
@@ -10319,6 +10369,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["react-bootstrap", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.1.1"],
             ["react-dom", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:17.0.2"],
             ["sass", "npm:1.49.0"],
+            ["string-format", "npm:2.0.0"],
             ["typescript", "patch:typescript@npm%3A4.5.5#~builtin<compat/typescript>::version=4.5.5&hash=493e53"],
             ["use-async-effect", "virtual:d6237097429ffe34cedea6bf1532538d390e3205ef63a9a3b7d724a0437192312072881cd1eb8686c6f94c7cd87fe4bc00dc3f5d5c04c0a014543456e3a8c040#npm:2.2.5"]
           ],
@@ -10870,6 +10921,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["stream-browserify", "npm:3.0.0"],
             ["inherits", "npm:2.0.4"],
             ["readable-stream", "npm:3.6.0"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["string-format", [
+        ["npm:2.0.0", {
+          "packageLocation": "./.yarn/cache/string-format-npm-2.0.0-002ceb1816-dada2ef95f.zip/node_modules/string-format/",
+          "packageDependencies": [
+            ["string-format", "npm:2.0.0"]
           ],
           "linkType": "HARD",
         }]
