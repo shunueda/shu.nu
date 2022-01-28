@@ -1,5 +1,4 @@
 import { chunk } from 'lodash'
-import Image from 'next/image'
 import { useEffect, useState } from 'react'
 import format from 'string-format'
 import useAsyncEffect from 'use-async-effect'
@@ -47,7 +46,7 @@ export default function Work() {
                 }}
               >
                 <div className={classes.inner}>
-                  <Image
+                  <img
                     src={image}
                     alt=''
                     style={{
