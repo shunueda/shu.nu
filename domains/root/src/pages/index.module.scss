@@ -1,0 +1,13 @@
+.root {
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+
+  .navbar {
+    padding: 2em;
+  }
+
+  .footer {
+    height: auto;
+  }
+}

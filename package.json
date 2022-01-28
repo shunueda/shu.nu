@@ -1,66 +1,60 @@
 {
   "name": "shu-nu",
-  "description": "",
+  "description": "https://shu-nu/",
   "version": "1.0.0",
   "private": true,
-  "author": "Shun Ueda <shu225@lehigh.edu> (@u5hun)",
+  "workspaces": [
+    "domains/*"
+  ],
+  "author": "Shun Ueda <shu225@lehigh.edu>",
   "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
     "type-check": "tsc",
-    "lint": "eslint --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\"",
-    "stylelint": "stylelint \"src/**/*.scss\"",
-    "format": "prettier --ignore-path .gitignore \"src/**/*.+(ts|js|tsx)\" --write",
-    "precommit": "yarn lint --fix && yarn stylelint --fix && yarn fixImport && yarn format",
-    "fixImport": "replace '~/src/' '' src -r",
-    "fastcommit": "yarn format && git add . && cz",
+    "lint": "eslint --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --resolve-plugins-relative-to .",
+    "stylelint": "stylelint \"**/*.scss\"",
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write",
+    "precommit": "yarn lint --fix && yarn stylelint --fix && yarn format",
     "commit": "yarn precommit && git add . && cz"
   },
   "dependencies": {
-    "@emotion/react": "^11.7.1",
-    "@emotion/styled": "^11.6.0",
-    "@mui/material": "^5.2.7",
-    "next": "latest",
+    "next": "^12.0.8",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "@commitlint/cli": "13.1.0",
-    "@commitlint/config-conventional": "13.1.0",
-    "@types/node": "14.17.15",
-    "@types/react": "17.0.21",
-    "@types/react-dom": "17.0.9",
-    "@typescript-eslint/eslint-plugin": "4.31.1",
-    "@typescript-eslint/parser": "4.31.1",
+    "@commitlint/cli": "12.1.4",
+    "@commitlint/config-conventional": "12.1.4",
+    "@typescript-eslint/eslint-plugin": "4.28.1",
+    "@typescript-eslint/parser": "^4.28.3",
+    "babel-eslint": "^10.1.0",
     "commitizen": "4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "7.32.0",
+    "eslint": "7.29.0",
     "eslint-config-airbnb": "18.2.1",
-    "eslint-config-next": "11.1.2",
+    "eslint-config-next": "11.0.1",
     "eslint-config-prettier": "8.3.0",
-    "eslint-import-resolver-typescript": "2.5.0",
+    "eslint-import-resolver-typescript": "2.4.0",
     "eslint-plugin-import": "2.23.4",
     "eslint-plugin-import-order-autofix": "^0.8.3",
     "eslint-plugin-jsx-a11y": "6.4.1",
-    "eslint-plugin-prettier": "4.0.0",
+    "eslint-plugin-prettier": "3.4.0",
     "eslint-plugin-react": "7.24.0",
     "eslint-plugin-react-hooks": "4.2.0",
-    "prettier": "2.4.0",
-    "replace": "^1.2.1",
-    "sass": "^1.35.2",
+    "prettier": "latest",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
-    "typescript": "4.4.3"
-  },
-  "resolutions": {
-    "colors": "1.4.0"
+    "typescript": "^3.7.2"
   },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@3.1.1"
+  "packageManager": "yarn@3.1.1",
+  "resolutions": {
+    "colors": "1.4.0"
+  },
+  "eslintConfig": {
+    "root": true
+  }
 }
