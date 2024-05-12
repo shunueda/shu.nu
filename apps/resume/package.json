@@ -1,0 +1,19 @@
+{
+  "name": "resume",
+  "version": "1.0.0",
+  "description": "Resume builder",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "scripts": {
+    "start": "vite-node src/index.ts"
+  },
+  "dependencies": {
+    "docx": "^8.5.0",
+    "mkdirp": "^3.0.1",
+    "yaml": "^2.4.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "shared": "*"
+  }
+}

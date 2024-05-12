@@ -1,0 +1,84 @@
+name: Shun Ueda
+email: me@shu.nu
+phone: (203) 979-5285
+github: github.com/shunueda
+website: shu.nu
+
+education:
+  - school: Lehigh University
+    start_date: August 2021
+    end_date: May 2025 (Expected)
+    degrees:
+      - type: B.S.
+        major: Computer Science & Engineering
+      - type: B.S.
+        major: Mathematics
+
+experience:
+  - company: Apple Inc.
+    position: Software Engineering Intern
+    descriptions: [
+      "Developed a CI/CD pipeline for AI/ML department operations.",
+      "Developed a CI/CD pipeline for AI/ML department operations."
+    ]
+    location: Seattle, WA
+    start_date: May 2024
+    end_date: August 2024
+  - company: Apple Inc.
+    position: Software Engineering Intern
+    descriptions: [
+      "Developed a CI/CD pipeline for AI/ML department operations."
+    ]
+    location: Seattle, WA
+    start_date: May 2023
+    end_date: August 2023
+  - company: Oncospace Inc.
+    position: Software Engineering Intern
+    descriptions: [
+      "MED image"
+    ]
+    location: Baltimore, MD
+    start_date: May 2022
+    end_date: August 2022
+skill:
+  "Languages & Framewords":
+    - C
+    - C++
+    - Java
+    - Kotlin
+    - Scala
+    - Python
+    - JavaScript
+    - TypeScript
+    - SQL
+    - Node
+    - React
+    - Bash
+  "Databases":
+    - MySQL
+    - SQLite
+    - Postgres
+    - Redis
+    - MongoDB
+  "DevOps":
+    - Git
+    - GitHub Actions
+    - GitLab CI/CD
+    - Jenkins
+    - Docker
+    - Apache
+    - Kubernetes
+    - Azure DevOps
+  "Cloud":
+    - AWS
+    - GCP
+    - Firebase
+    - Azure
+  "Test":
+    - Jest
+    - JUnit
+    - Postman
+    - Selenium
+  "Tools":
+    - JetBrains IDEs (IntelliJ IDEA, PyCharm)
+    - VSCode
