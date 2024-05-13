@@ -1,13 +1,21 @@
-import { readFileSync } from 'fs'
-import { Config, ResumeFormat } from 'shared'
-import { parse } from 'yaml'
+import { BlogPosts } from 'app/components/posts'
 
-async function fetchResume(): Promise<ResumeFormat> {
-  const resume = readFileSync(`../../${Config.RESUME_FILE}`).toString()
-  return parse(resume) as ResumeFormat
-}
-
-export default async function Home() {
-  const resume = await fetchResume()
-  return <>{JSON.stringify(resume)}</>
+export default function Page() {
+  return (
+    <section>
+      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
+        My Portfolio
+      </h1>
+      <p className="mb-4">
+        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
+        Vim's keystroke commands and tabs' flexibility for personal viewing
+        preferences. This extends to my support for static typing, where its
+        early error detection ensures cleaner code, and my preference for dark
+        mode, which eases long coding sessions by reducing eye strain.`}
+      </p>
+      <div className="my-8">
+        <BlogPosts />
+      </div>
+    </section>
+  )
 }
