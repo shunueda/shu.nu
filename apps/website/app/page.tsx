@@ -1,11 +1,10 @@
+import { readFileSync } from 'fs'
 import { Config, ResumeFormat } from 'shared'
 import { parse } from 'yaml'
 
 async function fetchResume(): Promise<ResumeFormat> {
-  const res = await fetch(
-    `https://raw.githubusercontent.com/shunueda/shu-nu/main/${Config.RESUME_FILE}`
-  )
-  return parse(await res.text())
+  const resume = readFileSync(`../../${Config.RESUME_FILE}`).toString()
+  return parse(resume) as ResumeFormat
 }
 
 export default async function Home() {
