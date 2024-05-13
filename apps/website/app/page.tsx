@@ -1,6 +1,11 @@
-async function fetchResume() {
-  const res = await fetch(`${process.env.__NEXT_PRIVATE_ORIGIN}/api/resume`)
-  return res.json()
+import { Config, ResumeFormat } from 'shared'
+import { parse } from 'yaml'
+
+async function fetchResume(): Promise<ResumeFormat> {
+  const res = await fetch(
+    `https://raw.githubusercontent.com/shunueda/shu-nu/main/${Config.RESUME_FILE}`
+  )
+  return parse(await res.text())
 }
 
 export default async function Home() {
