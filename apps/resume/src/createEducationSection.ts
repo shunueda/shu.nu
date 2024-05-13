@@ -1,5 +1,5 @@
 import { Paragraph, TextRun } from 'docx'
-import { Education } from '../../shared'
+import type { Education } from 'shared'
 import concatDates from './concatDates'
 import createEntryTitle from './createEntryTitle'
 import createSectionTitle from './createSectionTitle'

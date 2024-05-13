@@ -1,5 +1,5 @@
 import { Paragraph, TextRun } from 'docx'
-import { Skill } from 'shared'
+import type { Skill } from 'shared'
 import createSectionTitle from './createSectionTitle'
 import { NUMBERING_REFERENCE } from './numbering'
 

@@ -1,11 +1,11 @@
 import {
-  IParagraphOptions,
-  IRunOptions,
   Paragraph,
   Tab,
   TabStopPosition,
   TabStopType,
-  TextRun
+  TextRun,
+  type IParagraphOptions,
+  type IRunOptions
 } from 'docx'
 
 export default function createEntryTitle(
