@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 export const navItems: Record<string, string> = {
   github: 'https://github.com/shunueda',
-  resume: 'https://resume.shu.nu',
+  resume: '/resume.pdf',
   instagram: 'https://www.instagram.com/shun_ueda/'
 }
 

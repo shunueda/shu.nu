@@ -17,9 +17,10 @@ export default function Page() {
             <p className='text-neutral-600 dark:text-neutral-400 w-[200px] tabular-nums'>
               {experience.start_date} - {experience.end_date}
             </p>
-            <p className='text-neutral-900 dark:text-neutral-100 tracking-tight'>
-              <b>{experience.company}</b> - {experience.position}
-            </p>
+            <div className='text-neutral-900 dark:text-neutral-100 tracking-tight'>
+              <p className='font-bold'>{experience.company}</p>
+              <p>{experience.position}</p>
+            </div>
           </div>
         </div>
       ))}
