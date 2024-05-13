@@ -53,7 +53,7 @@ skill:
     - SQL
     - Node
     - React
-    - Bash
+    - SpringBoot
   "Databases":
     - MySQL
     - SQLite
