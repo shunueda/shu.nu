@@ -1,21 +1,28 @@
-import { BlogPosts } from 'app/components/posts'
+import { resume } from 'shared'
 
 export default function Page() {
   return (
     <section>
-      <h1 className="mb-8 text-2xl font-semibold tracking-tighter">
-        My Portfolio
-      </h1>
-      <p className="mb-4">
-        {`I'm a Vim enthusiast and tab advocate, finding unmatched efficiency in
-        Vim's keystroke commands and tabs' flexibility for personal viewing
-        preferences. This extends to my support for static typing, where its
-        early error detection ensures cleaner code, and my preference for dark
-        mode, which eases long coding sessions by reducing eye strain.`}
-      </p>
-      <div className="my-8">
-        <BlogPosts />
+      <h1 className='text-4xl font-semibold tracking-tighter'>{resume.name}</h1>
+      <h2 className='font-semibold tracking-tighter text-sm mb-8'>
+        {resume.email}
+      </h2>
+      <div className='mb-4'>
+        Software engineer & coffee toffee lover. Passionate about using
+        technology to solve real-world problems.
       </div>
+      {resume.experience.map(experience => (
+        <div className='my-8'>
+          <div className='w-full flex flex-col md:flex-row space-x-0 md:space-x-2'>
+            <p className='text-neutral-600 dark:text-neutral-400 w-[200px] tabular-nums'>
+              {experience.start_date} - {experience.end_date}
+            </p>
+            <p className='text-neutral-900 dark:text-neutral-100 tracking-tight'>
+              <b>{experience.company}</b> - {experience.position}
+            </p>
+          </div>
+        </div>
+      ))}
     </section>
   )
 }
