@@ -3,15 +3,16 @@ import getBrowser from '../util/getBrowser'
 
 export const dynamic = 'force-dynamic'
 
-export async function GET(request: NextRequest) {
+export async function GET(_: NextRequest) {
   const browser = await getBrowser()
   const page = await browser.newPage()
-  await page.goto('https://apple.com')
-  const pdf = await page.pdf()
-  await browser.close()
-  return new NextResponse(pdf, {
-    headers: {
-      'Content-Type': 'application/pdf'
-    }
+  await page.goto('https://www.linkedin.com/in/shunueda/')
+  await page.waitForSelector('main')
+  const mainContent = await page.evaluate(() => {
+    const mainElement = document.querySelector('main')
+    return mainElement ? mainElement.innerHTML : null
   })
+  console.log(mainContent)
+  await browser.close()
+  return NextResponse.json({ result: mainContent }, { status: 200 })
 }
