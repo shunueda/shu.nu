@@ -1,9 +1,9 @@
-import chromium from '@sparticuz/chromium-min'
-import puppeteer from 'puppeteer'
-import puppeteerCore from 'puppeteer-core'
-
 export default async function getBrowser() {
   if (process.env.VERCEL_ENV === 'production') {
+    const chromium = await import('@sparticuz/chromium-min').then(
+      it => it.default
+    )
+    const puppeteerCore = await import('puppeteer-core').then(it => it.default)
     const executablePath = await chromium.executablePath(
       'https://vomrghiulbmrfvmhlflk.supabase.co/storage/v1/object/public/chromium-pack/chromium-v123.0.0-pack.tar'
     )
@@ -14,6 +14,7 @@ export default async function getBrowser() {
       headless: chromium.headless
     })
   } else {
+    const puppeteer = await import('puppeteer').then(it => it.default)
     return await puppeteer.launch()
   }
 }
