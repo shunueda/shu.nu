@@ -9,7 +9,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@sparticuz/chromium-min": "^115.0.0",
     "@tailwindcss/postcss": "4.0.0-alpha.13",
     "@types/node": "20.11.17",
     "@types/react": "18.2.55",
@@ -20,8 +19,7 @@
     "next": "canary",
     "next-mdx-remote": "^4.4.1",
     "postcss": "^8.4.35",
-    "puppeteer": "^10.1.0",
-    "puppeteer-core": "^21.0.2",
+    "puppeteer": "latest",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "sass": "^1.77.1",
