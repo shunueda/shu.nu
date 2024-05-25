@@ -1,6 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import getBrowser from '../util/getBrowser'
 
+export const dynamic = 'force-dynamic'
+
 export async function GET(request: NextRequest) {
   const browser = await getBrowser()
   const page = await browser.newPage()
