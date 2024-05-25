@@ -1,4 +1,4 @@
-export interface ResumeFormat {
+export interface Profile {
   name: string
   email: string
   phone: string

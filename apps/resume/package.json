@@ -5,10 +5,9 @@
   "main": "src/index.ts",
   "license": "MIT",
   "scripts": {
-    "start": "vite-node src/index.ts"
+    "build": "vite-node src/index.ts && cp lib/glyphtounicode.tex out && latexmk -pdf out/resume.tex -outdir=out"
   },
   "dependencies": {
-    "docx": "^8.5.0",
     "mkdirp": "^3.0.1"
   },
   "devDependencies": {

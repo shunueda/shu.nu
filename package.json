@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx)\" --write"
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx|yaml|yml)\" --write"
   },
   "devDependencies": {
     "prettier": "^3.2.5",

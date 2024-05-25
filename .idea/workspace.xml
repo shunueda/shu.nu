@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/apps/website/public/resume.pdf" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/website/app/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/app/components/nav.tsx" afterDir="false" />
@@ -12,6 +13,37 @@
       <change beforePath="$PROJECT_DIR$/apps/website/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/website/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/tsconfig.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+=======
+      <change afterPath="$PROJECT_DIR$/apps/resume/lib/glyphtounicode.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.aux" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.dvi" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.fdb_latexmk" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.fls" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/resume.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/resume/src/util/escapeLatex.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/resume/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/concatDates.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createEducationSection.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createEntryTitle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createExperienceSection.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createHyperLink.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createSectionTitle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createSkillSection.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/createTitle.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/docxToPdf.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/resume/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/numbering.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/styles.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/resume/src/util.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/website/app/not-found.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/app/not-found.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/website/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/postcss.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resume.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resume.yaml" afterDir="false" />
+>>>>>>> Stashed changes
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,35 +81,48 @@
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+<<<<<<< Updated upstream
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
     &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/shu-nu/apps/website&quot;,
+=======
+    &quot;LaTeX.template.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/shu-nu/apps/resume/lib&quot;,
+>>>>>>> Stashed changes
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/me/dev/shunueda/shu-nu/node_modules/prettier&quot;,
+<<<<<<< Updated upstream
     &quot;settings.editor.selected.configurable&quot;: &quot;settings.javascript.prettier&quot;,
+=======
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+>>>>>>> Stashed changes
     &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/shu-nu/node_modules/typescript/lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/apps/resume/lib" />
+      <recent name="$PROJECT_DIR$/apps/resume-legacy" />
+      <recent name="$PROJECT_DIR$/apps/resume" />
       <recent name="$PROJECT_DIR$/apps/website" />
       <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/website/public" />
-      <recent name="$PROJECT_DIR$/apps/resume" />
-      <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/website/app" />
-      <recent name="$PROJECT_DIR$/apps/website/src/lib" />
-      <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/shared/src" />
+      <recent name="$PROJECT_DIR$/apps/resume/out" />
       <recent name="$PROJECT_DIR$/apps/resume/src" />
+      <recent name="$PROJECT_DIR$/apps/resume" />
+      <recent name="$PROJECT_DIR$/apps/resume-legacy" />
+      <recent name="$PROJECT_DIR$/apps/resume/legacy" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -97,7 +142,14 @@
       <option name="presentableId" value="Default" />
       <updated>1715392236974</updated>
       <workItem from="1715392238091" duration="35513000" />
+<<<<<<< Updated upstream
       <workItem from="1715616293584" duration="5363000" />
+=======
+      <workItem from="1715616293584" duration="6635000" />
+      <workItem from="1716519703244" duration="12318000" />
+      <workItem from="1716605014217" duration="3162000" />
+      <workItem from="1716620848544" duration="223000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
