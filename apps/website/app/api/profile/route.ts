@@ -1,24 +1,46 @@
 import { NextRequest, NextResponse } from 'next/server'
-import puppeteer from 'puppeteer'
+
+export const dynamic = 'force-dynamic'
+
+const CHROMIUM_PATH =
+  'https://vomrghiulbmrfvmhlflk.supabase.co/storage/v1/object/public/chromium-pack/chromium-v123.0.0-pack.tar'
 
 async function getBrowser() {
-  return puppeteer.launch()
+  if (process.env.VERCEL_ENV === 'production') {
+    const chromium = await import('@sparticuz/chromium-min').then(
+      mod => mod.default
+    )
+
+    const puppeteerCore = await import('puppeteer-core').then(
+      mod => mod.default
+    )
+
+    const executablePath = await chromium.executablePath(CHROMIUM_PATH)
+
+    return await puppeteerCore.launch({
+      args: chromium.args,
+      defaultViewport: chromium.defaultViewport,
+      executablePath,
+      headless: chromium.headless
+    })
+  } else {
+    const puppeteer = await import('puppeteer').then(mod => mod.default)
+
+    const browser = await puppeteer.launch()
+    return browser
+  }
 }
 
-export async function GET(_: NextRequest) {
+export async function GET(request: NextRequest) {
   const browser = await getBrowser()
+
   const page = await browser.newPage()
-  await page.goto('https://www.linkedin.com/in/shunueda/')
-  await page.setViewport({
-    height: 1080,
-    width: 1920
-  })
-  await page.waitForSelector('main')
-  const mainContent = await page.evaluate(() => {
-    const mainElement = document.querySelector('main')
-    return mainElement ? mainElement.innerHTML : null
-  })
-  console.log(mainContent)
+  await page.goto('https://example.com')
+  const pdf = await page.pdf()
   await browser.close()
-  return NextResponse.json({ result: mainContent }, { status: 200 })
+  return new NextResponse(pdf, {
+    headers: {
+      'Content-Type': 'application/pdf'
+    }
+  })
 }
