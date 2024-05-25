@@ -26,5 +26,5 @@ export async function GET(_: NextRequest) {
   })
   console.log(mainContent)
   await browser.close()
-  return NextResponse.json({ error: 'Hello' }, { status: 200 })
+  return NextResponse.json({ result: mainContent }, { status: 200 })
 }
