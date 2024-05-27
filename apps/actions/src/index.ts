@@ -1,6 +1,5 @@
-import { setOutput } from '@actions/core'
+import { getInput, setOutput } from '@actions/core'
 
-const res = await fetch('https://api.github.com/users/xiaotian/repos')
-const data = await res.json()
+const id = parseInt(getInput('id'))
 
-setOutput('data', data)
+setOutput('data', id)

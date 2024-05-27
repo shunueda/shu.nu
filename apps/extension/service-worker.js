@@ -13,7 +13,8 @@ chrome.action.onClicked.addListener(async tab => {
       const body = await resume.parseAndGetRawJson()
       await fetch('https://shu.nu/api/resume/build', {
         method: 'POST',
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
+        mode: 'no-cors'
       })
     }
   })

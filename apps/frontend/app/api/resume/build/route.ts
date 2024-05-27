@@ -1,4 +1,5 @@
 import cors from '@/api/cors'
+import triggerWorkflow from '@/lib/github/triggerWorkflow'
 import getDatabase from '@/lib/postgres/getDatabase'
 import { NextRequest, NextResponse } from 'next/server'
 import { LinkedInProfile } from 'shared'
@@ -13,5 +14,6 @@ export async function POST(req: NextRequest) {
     })
     .returning('id')
     .executeTakeFirst()
+  await triggerWorkflow('test', { id: result.id })
   return cors(req, NextResponse.json(result))
 }

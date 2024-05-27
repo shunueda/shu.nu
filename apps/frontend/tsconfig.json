@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "target": "esnext",
     "lib": [
       "dom",
       "dom.iterable",
@@ -10,9 +11,9 @@
     "strict": false,
     "noEmit": true,
     "incremental": true,
-    "module": "nodenext",
+    "module": "esnext",
     "esModuleInterop": true,
-    "moduleResolution": "nodenext",
+    "moduleResolution": "bundler",
     "resolveJsonModule": true,
     "isolatedModules": true,
     "jsx": "preserve",
