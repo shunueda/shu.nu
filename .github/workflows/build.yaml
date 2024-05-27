@@ -41,6 +41,6 @@ jobs:
           root_file: resume.tex
 
       - run: pnpm build
-        working-directory: ${{ matrix.actions-directory }}/pdf
+        working-directory: ${{ matrix.actions-directory }}/upload
 
       - run: echo "Latex and PDF build completed"
