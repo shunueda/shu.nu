@@ -14,18 +14,20 @@
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
     "@vercel/analytics": "^1.1.3",
+    "@vercel/postgres-kysely": "^0.8.0",
     "@vercel/speed-insights": "^1.0.9",
     "cheerio": "1.0.0-rc.12",
     "cors": "^2.8.5",
     "geist": "1.2.2",
+    "kysely": "^0.27.3",
     "next": "^14.2.3",
     "postcss": "^8.4.35",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "sass": "^1.77.1",
+    "shared": "workspace:../shared",
     "tailwindcss": "4.0.0-alpha.13",
-    "typescript": "5.3.3",
-    "shared": "workspace:../shared"
+    "typescript": "5.3.3"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17"

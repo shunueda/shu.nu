@@ -1,12 +1,12 @@
+import Footer from '@/components/footer'
+import { Navbar } from '@/components/nav'
+import cx from '@/lib/cx'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
 import { ReactNode } from 'react'
-import Footer from './components/footer'
-import { Navbar } from './components/nav'
 import './global.scss'
-import { cx } from './util'
 
 export const runtime = 'edge'
 

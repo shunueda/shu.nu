@@ -1,12 +1,16 @@
 import cors from '@/api/cors'
-import parseProfile from '@/api/resume/build/parseProfile'
+import getDatabase from '@/lib/postgres/getDatabase'
 import { NextRequest } from 'next/server'
-
-export const runtime = 'nodejs'
+import { LinkedInProfile } from 'shared'
 
 export async function POST(req: NextRequest) {
-  const html = await req.text()
-  const profile = parseProfile(html)
-  console.log(JSON.stringify(profile, null, 2))
-  return cors(req, Response.json(profile))
+  const profile = (await req.json()) as LinkedInProfile
+  const db = await getDatabase()
+  await db
+    .insertInto('linkedin_profile')
+    .values({
+      data: profile
+    })
+    .execute()
+  return cors(req, Response.json({}))
 }

@@ -1,1 +1,2 @@
-export * from './Profile'
+export * from './db/database'
+export * from './models/LinkedInProfile'

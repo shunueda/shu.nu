@@ -1,4 +1,3 @@
-import { LinkedinToResumeJson } from './src/main.js'
 const PROFILE_URL = 'https://www.linkedin.com/in/shunueda/'
 
 chrome.action.onClicked.addListener(async tab => {
@@ -7,10 +6,15 @@ chrome.action.onClicked.addListener(async tab => {
   }
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
-    func: () => {
-      const resume = new LinkedinToResumeJson(true, true, true)
-
-      console.log(resume)
+    func: async () => {
+      const src = chrome.runtime.getURL('src/main.js')
+      await import(src)
+      const resume = new LinkedinToResumeJson()
+      const body = await resume.parseAndGetRawJson()
+      await fetch('https://shu.nu/api/resume/build', {
+        method: 'POST',
+        body: JSON.stringify(body)
+      })
     }
   })
 })
