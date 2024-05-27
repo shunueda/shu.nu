@@ -4,7 +4,7 @@
     "target": "es2017",
     "module": "es2022",
     "rootDir": "./src",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "node",
     "baseUrl": "./",
     "sourceMap": true,
     "outDir": "./dist",
