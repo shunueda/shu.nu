@@ -10,6 +10,6 @@ const res = await fetch(`https://shu.nu/api/resume/data/${id}`, {
 const json = await res.json()
 const latex = generateLatex(json)
 
-writeFileSync('resume.tex', latex)
-
-setOutput('output', latex)
+const PATH = 'resume.tex'
+writeFileSync(PATH, latex)
+setOutput('path', PATH)

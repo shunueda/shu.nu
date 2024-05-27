@@ -1,5 +1,5 @@
-name: 'action'
-description: 'Build Resume to PDF'
+name: 'upload'
+description: 'Upload a file to a server'
 
 inputs:
   id:

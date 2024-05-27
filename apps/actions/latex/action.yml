@@ -7,8 +7,8 @@ inputs:
     required: true
 
 outputs:
-  output:
-    description: 'Latex data'
+  path:
+    description: 'Path to the built Latex file'
 
 runs:
   using: node20

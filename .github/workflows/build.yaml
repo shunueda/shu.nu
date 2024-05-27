@@ -36,7 +36,9 @@ jobs:
         with:
           id: ${{ github.event.inputs.id }}
 
-      - run: echo "${{ steps.latex.outputs.output }}"
+      - uses: xu-cheng/latex-action@v3
+        with:
+          root_file: resume.tex
 
       - run: pnpm build
         working-directory: ${{ matrix.actions-directory }}/pdf
