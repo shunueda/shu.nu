@@ -36,7 +36,7 @@ jobs:
         with:
           id: ${{ github.event.inputs.id }}
 
-      - run: echo "${{ steps.latex.outputs.data }}"
+      - run: echo "${{ steps.latex.outputs.output }}"
 
       - run: pnpm build
         working-directory: ${{ matrix.actions-directory }}/pdf
