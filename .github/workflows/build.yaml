@@ -6,6 +6,7 @@ on:
       id:
         description: 'ID of the resume to build'
         required: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -13,7 +14,6 @@ jobs:
       matrix:
         node-version: [ 20 ]
         actions-directory: [ 'apps/actions' ]
-        actions: [ 'latex', 'pdf' ]
     steps:
       - uses: actions/checkout@v4
 
@@ -29,24 +29,9 @@ jobs:
           run_install: true
 
       - run: pnpm build
-        working-directory: ${{ matrix.actions-directory }}/${{ matrix.actions }}
-
-      - id: build_latex
-        run: pnpm run latex
         working-directory: ${{ matrix.actions-directory }}/latex
-        with:
-          id: ${{ github.event.inputs.id }}
 
-      - id: build_pdf
-        run: pnpm run pdf
+      - run: pnpm build
         working-directory: ${{ matrix.actions-directory }}/pdf
-        with:
-          id: ${{ github.event.inputs.id }}
 
       - run: echo "Latex and PDF build completed"
-#      - id: action
-#        uses: ./${{ matrix.directory }}/latex
-#        with:
-#          id: ${{ github.event.inputs.id }}
-#
-#      - run: echo "${{ steps.action.outputs.data }}"
