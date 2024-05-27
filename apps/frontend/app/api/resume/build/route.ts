@@ -14,6 +14,6 @@ export async function POST(req: NextRequest) {
     })
     .returning('id')
     .executeTakeFirst()
-  await triggerWorkflow('test.yaml', { id: result.id.toString() })
+  await triggerWorkflow('actions.yaml', { id: result.id })
   return cors(req, NextResponse.json(result))
 }
