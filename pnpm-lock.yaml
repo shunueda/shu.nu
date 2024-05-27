@@ -27,9 +27,6 @@ importers:
       '@actions/core':
         specifier: ^1.10.1
         version: 1.10.1
-      '@actions/http-client':
-        specifier: ^2.2.1
-        version: 2.2.1
       shared:
         specifier: workspace:*
         version: link:../../shared
@@ -46,9 +43,6 @@ importers:
       '@actions/core':
         specifier: ^1.10.1
         version: 1.10.1
-      '@actions/http-client':
-        specifier: ^2.2.1
-        version: 2.2.1
       shared:
         specifier: workspace:*
         version: link:../../shared
