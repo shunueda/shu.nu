@@ -1,9 +1,10 @@
 import Link from 'next/link'
+import { resume } from 'shared'
 
 export const navItems: Record<string, string> = {
-  github: 'https://github.com/shunueda',
-  resume: '/resume.pdf',
-  linkedin: 'https://www.linkedin.com/in/shunueda/'
+  email: `mailto:${resume.email}`,
+  linkedin: 'https://www.linkedin.com/in/shunueda/',
+  github: 'https://github.com/shunueda'
 }
 
 export function Navbar() {

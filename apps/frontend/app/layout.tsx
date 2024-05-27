@@ -1,16 +1,50 @@
-import Footer from '@/components/footer'
-import { Navbar } from '@/components/nav'
-import cx from '@/lib/cx'
 import { Analytics } from '@vercel/analytics/react'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { GeistMono } from 'geist/font/mono'
 import { GeistSans } from 'geist/font/sans'
-import { ReactNode } from 'react'
+import { Metadata } from 'next'
+import { resume } from 'shared'
+import Footer from './components/footer'
+import { Navbar } from './components/nav'
 import './global.scss'
 
-export const runtime = 'edge'
+const cx = (...classes: string[]) => classes.filter(Boolean).join(' ')
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+const baseUrl = `https://${resume.website}`
+
+export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
+  title: {
+    default: 'Shun Ueda',
+    template: 'Shun Ueda | %s'
+  },
+  description: `Shun Ueda - ${resume}`,
+  openGraph: {
+    title: 'Shun Ueda',
+    description: `Shun Ueda`,
+    url: resume.website,
+    siteName: 'Shun Ueda',
+    locale: 'en_US',
+    type: 'website'
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1
+    }
+  }
+}
+
+export default function RootLayout({
+  children
+}: {
+  children: React.ReactNode
+}) {
   return (
     <html
       lang='en'
