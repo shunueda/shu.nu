@@ -1,4 +1,4 @@
-name: TEST
+name: actions
 
 on:
   workflow_dispatch:
@@ -12,38 +12,30 @@ jobs:
     strategy:
       matrix:
         node-version: [ 20 ]
+        directory: [ 'apps/actions' ]
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Enable Corepack
-        run: corepack enable
+      - run: corepack enable
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
 
-      - name: Install pnpm
-        uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@v4
         with:
           run_install: false
 
-      - name: Install dependencies
-        run: pnpm install
-        working-directory: apps/actions
+      - run: pnpm install
+        working-directory: ${{ matrix.directory }}
 
-      - name: Build custom action
-        run: pnpm build
-        working-directory: apps/actions
+      - run: pnpm build
+        working-directory: ${{ matrix.directory }}
 
-      - name: Run action
-        id: action
-        uses: ./apps/actions
+      - id: action
+        uses: ${{ matrix.directory }}
         with:
           id: ${{ github.event.inputs.id }}
 
-      - name: Print Output
-        id: output
-        run: echo "${{ steps.action.outputs.data }}"
+      - run: echo "${{ steps.action.outputs.data }}"
