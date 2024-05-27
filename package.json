@@ -1,24 +1,19 @@
 {
   "name": "shu-nu",
   "version": "1.0.0",
-  "description": "Shun Ueda's website",
+  "description": "Everything about Shun Ueda",
   "repository": "https://github.com/shunueda/shu-nu.git",
   "author": "me@shu.nu",
   "license": "MIT",
   "private": true,
   "scripts": {
-    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|js|tsx|yaml|yml)\" --write"
+    "format": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|yaml|json)\" --write"
   },
   "devDependencies": {
     "prettier": "^3.2.5",
-    "prettier-plugin-organize-imports": "^3.2.4",
-    "vite-node": "^1.6.0"
+    "prettier-plugin-organize-imports": "^3.2.4"
   },
   "dependencies": {
-    "typescript": "^5.4.5",
-    "yaml": "^2.4.2"
-  },
-  "workspaces": [
-    "apps/*"
-  ]
+    "typescript": "^5.4.5"
+  }
 }

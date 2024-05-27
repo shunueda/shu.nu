@@ -1,0 +1,16 @@
+{
+  "name": "shu-nu",
+  "action": {},
+  "manifest_version": 3,
+  "version": "0.1",
+  "description": "",
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "type": "module",
+    "service_worker": "service-worker.js"
+  },
+  "minimum_chrome_version": "92"
+}
