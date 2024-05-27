@@ -1,0 +1,15 @@
+name: 'Build Latex'
+description: 'Build Latex using JSON data'
+
+inputs:
+  id:
+    description: 'ID of the resume to build'
+    required: true
+
+outputs:
+  data:
+    description: 'temp output'
+
+runs:
+  using: node20
+  main: dist/index.js

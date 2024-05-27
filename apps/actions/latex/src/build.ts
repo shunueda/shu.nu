@@ -8,7 +8,7 @@ import {
   Work
 } from 'shared'
 
-const generateLaTeX = (profile: LinkedInProfile): string => {
+const build = (profile: LinkedInProfile): string => {
   const { basics, education, work, projects, skills } = profile
 
   const formatProfiles = (profiles: Profile[] = []) =>
