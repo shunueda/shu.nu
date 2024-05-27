@@ -41,6 +41,7 @@ jobs:
       - name: Run custom action
         id: test-action
         uses: ./apps/actions
+
       - name: Print Output
         id: output
         run: echo "${{ steps.test-action.outputs.data }}"
