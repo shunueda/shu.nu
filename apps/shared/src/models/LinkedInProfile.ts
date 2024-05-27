@@ -14,7 +14,6 @@ import {
   Location,
   Profile,
   Reference,
-  ResumeSchemaLegacy,
   Skill
 } from './legacy'
 
@@ -154,22 +153,22 @@ export interface Project {
   url?: string
 }
 
-export type Publication = Omit<
-  ResumeSchemaLegacy['publications'][0],
-  'website'
-> & {
-  /**
-   * e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html
-   */
-  url?: string
-}
+// export type Publication = Omit<
+//   ResumeSchemaLegacy['publications'][0],
+//   'website'
+// > & {
+//   /**
+//    * e.g. http://www.computer.org.example.com/csdl/mags/co/1996/10/rx069-abs.html
+//    */
+//   url?: string
+// }
 
-export type Volunteer = Omit<ResumeSchemaLegacy['volunteer'][0], 'website'> & {
-  /**
-   * e.g. https://www.eff.org/
-   */
-  url?: string
-}
+// export type Volunteer = Omit<ResumeSchemaLegacy['volunteer'][0], 'website'> & {
+//   /**
+//    * e.g. https://www.eff.org/
+//    */
+//   url?: string
+// }
 
 export interface Work {
   /**
@@ -232,7 +231,7 @@ export interface LinkedInProfile {
   /**
    * Specify your publications through your career
    */
-  publications?: Publication[]
+  // publications?: Publication[]
   /**
    * List references you have received
    */
@@ -241,7 +240,7 @@ export interface LinkedInProfile {
    * List out your professional skill-set
    */
   skills?: Skill[]
-  volunteer?: Volunteer[]
+  // volunteer?: Volunteer[]
   work?: Work[]
 }
 
