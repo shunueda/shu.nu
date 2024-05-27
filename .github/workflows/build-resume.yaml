@@ -1,4 +1,4 @@
-name: Continuous Integration Test
+name: Build Resume
 
 on:
   workflow_dispatch:

@@ -1,4 +1,4 @@
-name: Continuous Integration Test
+name: TEST
 
 on:
   workflow_dispatch:
