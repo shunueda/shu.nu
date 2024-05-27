@@ -1,3 +1,4 @@
+import withTimestamp from '@/lib/postgres/withTimestamp'
 import { createKysely } from '@vercel/postgres-kysely'
 import { Database } from 'shared'
 
@@ -7,10 +8,8 @@ async function init() {
   await db.schema
     .createTable('linkedin_profile')
     .ifNotExists()
-    .addColumn('id', 'serial', cb => cb.primaryKey())
-    .addColumn('created_at', 'timestamptz', cb =>
-      cb.defaultTo(new Date()).notNull()
-    )
+    .addColumn('id', 'serial', col => col.primaryKey())
+    .$call(withTimestamp)
     .addColumn('data', 'json')
     .execute()
 }

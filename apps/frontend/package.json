@@ -26,8 +26,7 @@
     "react-dom": "^18.3.1",
     "sass": "^1.77.1",
     "shared": "workspace:../shared",
-    "tailwindcss": "4.0.0-alpha.13",
-    "typescript": "5.3.3"
+    "tailwindcss": "4.0.0-alpha.13"
   },
   "devDependencies": {
     "@types/cors": "^2.8.17"

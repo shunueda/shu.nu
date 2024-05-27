@@ -11,7 +11,7 @@
 16389||-9223372036854775808|T|G
 16389||16384|T|G
 16389||16387|T|G</Grants>
-      <IntrospectionStateNumber>17452</IntrospectionStateNumber>
+      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
       <ServerVersion>16.3</ServerVersion>
       <StartupTime>1716833761</StartupTime>
       <TimeZones>true ACDT
@@ -813,7 +813,7 @@ false Zulu
 13187||10|C|G
 13187||-9223372036854775808|U|G
 13187||10|U|G</Grants>
-      <IntrospectionStateNumber>17452</IntrospectionStateNumber>
+      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
       <ObjectId>16389</ObjectId>
       <OwnerName>default</OwnerName>
     </database>
@@ -4257,23 +4257,23 @@ false Zulu
     <schema id="267" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>17452</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-05-27.18:44:24</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-05-27.19:04:59</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>523</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
     <sequence id="268" parent="267" name="linkedin_profile_id_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>49197</ObjectId>
+      <ObjectId>49229</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>17450</StateNumber>
+      <StateNumber>17474</StateNumber>
       <OwnerName>default</OwnerName>
     </sequence>
     <table id="269" parent="267" name="linkedin_profile">
-      <ObjectId>49198</ObjectId>
-      <StateNumber>17450</StateNumber>
+      <ObjectId>49230</ObjectId>
+      <StateNumber>17474</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>default</OwnerName>
     </table>
@@ -4282,39 +4282,47 @@ false Zulu
       <DefaultExpression>nextval(&apos;linkedin_profile_id_seq&apos;::regclass)</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>17450</StateNumber>
-      <SequenceId>49197</SequenceId>
+      <StateNumber>17474</StateNumber>
+      <SequenceId>49229</SequenceId>
       <TypeId>23</TypeId>
     </column>
     <column id="271" parent="269" name="created_at">
       <DasType>timestamp with time zone|0s</DasType>
-      <DefaultExpression>&apos;2024-05-27 18:44:16.188+00&apos;::timestamp with time zone</DefaultExpression>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>17450</StateNumber>
+      <StateNumber>17474</StateNumber>
       <TypeId>1184</TypeId>
     </column>
-    <column id="272" parent="269" name="data">
-      <DasType>json|0s</DasType>
+    <column id="272" parent="269" name="updated_at">
+      <DasType>timestamp with time zone|0s</DasType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <NotNull>1</NotNull>
       <Position>3</Position>
-      <StateNumber>17450</StateNumber>
+      <StateNumber>17474</StateNumber>
+      <TypeId>1184</TypeId>
+    </column>
+    <column id="273" parent="269" name="data">
+      <DasType>json|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>17474</StateNumber>
       <TypeId>114</TypeId>
     </column>
-    <index id="273" parent="269" name="linkedin_profile_pkey">
+    <index id="274" parent="269" name="linkedin_profile_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>49205</ObjectId>
+      <ObjectId>49238</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>17450</StateNumber>
+      <StateNumber>17474</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <key id="274" parent="269" name="linkedin_profile_pkey">
+    <key id="275" parent="269" name="linkedin_profile_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>49206</ObjectId>
+      <ObjectId>49239</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>17450</StateNumber>
-      <UnderlyingIndexId>49205</UnderlyingIndexId>
+      <StateNumber>17474</StateNumber>
+      <UnderlyingIndexId>49238</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

@@ -1,0 +1,42 @@
+name: Continuous Integration Test
+
+on:
+  push:
+    branches:
+      - '**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+        with:
+          version: 8
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install
+        working-directory: apps/actions
+
+      - name: Build custom action
+        run: pnpm run build
+        working-directory: apps/actions
+
+      - name: Run custom action
+        id: test-action
+        uses: ./apps/actions
+        with:
+          milliseconds: 1000
+      - name: Print Output
+        id: output
+        run: echo "${{ steps.test-action.outputs.time }}"
