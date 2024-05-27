@@ -1,7 +1,6 @@
-/**
- * The entrypoint for the action.
- */
-import { run } from './main'
+import { setOutput } from '@actions/core'
 
-// eslint-disable-next-line @typescript-eslint/no-floating-promises
-run()
+const res = await fetch('https://api.github.com/users/xiaotian/repos')
+const data = await res.json()
+
+setOutput('data', data)

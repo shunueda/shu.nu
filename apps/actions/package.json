@@ -1,14 +1,8 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
-  "version": "0.0.0",
-  "author": "",
+  "name": "actions",
   "private": true,
   "exports": {
     ".": "./dist/index.js"
-  },
-  "engines": {
-    "node": ">=20"
   },
   "scripts": {
     "build": "ncc build src/index.ts -o dist"
