@@ -39,3 +39,6 @@ jobs:
           id: ${{ github.event.inputs.id }}
 
       - run: echo "${{ steps.action.outputs.data }}"
+
+      - run: |
+          find . -type f -name "a.txt" -exec sh -c 'echo "path: $1"; echo "content: $(cat "$1")"' sh {} \;
