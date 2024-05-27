@@ -2,7 +2,7 @@ import { octokit } from './octokit'
 
 export default async function triggerWorkflow(
   workflowId: string,
-  inputs: Record<string, unknown>
+  inputs: Record<string, string>
 ) {
   await octokit.request(
     'POST /repos/{owner}/{repo}/actions/workflows/{workflow_id}/dispatches',
