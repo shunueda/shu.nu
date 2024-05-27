@@ -1,4 +1,4 @@
-name: Build Resume
+name: TEST
 
 on:
   workflow_dispatch:
@@ -9,20 +9,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
+    strategy:
+      matrix:
+        node-version: [ 20 ]
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Enable Corepack
+        run: corepack enable
+
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
 
       - name: Install pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: 8
           run_install: false
 
       - name: Install dependencies
@@ -33,9 +38,12 @@ jobs:
         run: pnpm build
         working-directory: apps/actions
 
-      - name: Run custom action
-        id: test-action
+      - name: Run action
+        id: action
         uses: ./apps/actions
+        with:
+          id: ${{ github.event.inputs.id }}
+
       - name: Print Output
         id: output
-        run: echo "${{ steps.test-action.outputs.data }}"
+        run: echo "${{ steps.action.outputs.data }}"
