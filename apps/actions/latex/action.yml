@@ -7,8 +7,8 @@ inputs:
     required: true
 
 outputs:
-  data:
-    description: 'temp output'
+  output:
+    description: 'Latex data'
 
 runs:
   using: node20
