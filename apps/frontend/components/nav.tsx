@@ -1,8 +1,7 @@
 import Link from 'next/link'
-import { resume } from 'shared'
 
 export const navItems: Record<string, string> = {
-  email: `mailto:${resume.email}`,
+  // email: `mailto:${resume.email}`,
   linkedin: 'https://www.linkedin.com/in/shunueda/',
   github: 'https://github.com/shunueda'
 }

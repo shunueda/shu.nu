@@ -10,22 +10,20 @@
   },
   "dependencies": {
     "@tailwindcss/postcss": "4.0.0-alpha.13",
-    "@types/node": "20.11.17",
     "@types/react": "18.2.55",
     "@types/react-dom": "18.2.19",
     "@vercel/analytics": "^1.1.3",
+    "@vercel/postgres-kysely": "^0.8.0",
     "@vercel/speed-insights": "^1.0.9",
     "geist": "1.2.2",
-    "next": "canary",
-    "next-mdx-remote": "^4.4.1",
+    "kysely": "^0.27.3",
+    "next": "14.2.3",
     "postcss": "^8.4.35",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rough-notation": "^0.5.1",
     "sass": "^1.77.1",
-    "shared": "*",
-    "sugar-high": "^0.6.0",
-    "tailwindcss": "4.0.0-alpha.13",
-    "typescript": "5.3.3"
+    "shared": "workspace:../shared",
+    "tailwindcss": "4.0.0-alpha.13"
   }
 }
