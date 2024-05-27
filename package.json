@@ -16,5 +16,6 @@
   },
   "dependencies": {
     "typescript": "latest"
-  }
+  },
+  "packageManager": "pnpm@9.1.2"
 }
