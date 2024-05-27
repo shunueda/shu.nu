@@ -3,7 +3,15 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.52">
     <root id="1">
       <DateStyle>mdy</DateStyle>
-      <Grants>16389||-9223372036854775808|c|G
+      <Grants>1||-9223372036854775808|c|G
+1||10|c|G
+1||10|C|G
+1||10|T|G
+4||-9223372036854775808|c|G
+4||10|c|G
+4||10|C|G
+4||10|T|G
+16389||-9223372036854775808|c|G
 16389||16384|c|G
 16389||16387|c|G
 16389||16384|C|G
@@ -11,9 +19,9 @@
 16389||-9223372036854775808|T|G
 16389||16384|T|G
 16389||16387|T|G</Grants>
-      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
+      <IntrospectionStateNumber>19461</IntrospectionStateNumber>
       <ServerVersion>16.3</ServerVersion>
-      <StartupTime>1716833761</StartupTime>
+      <StartupTime>1716840418</StartupTime>
       <TimeZones>true ACDT
 true ACSST
 false ACST
@@ -813,7 +821,7 @@ false Zulu
 13187||10|C|G
 13187||-9223372036854775808|U|G
 13187||10|U|G</Grants>
-      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
+      <IntrospectionStateNumber>19461</IntrospectionStateNumber>
       <ObjectId>16389</ObjectId>
       <OwnerName>default</OwnerName>
     </database>
@@ -4257,8 +4265,8 @@ false Zulu
     <schema id="267" parent="3" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>17478</IntrospectionStateNumber>
-      <LastIntrospectionLocalTimestamp>2024-05-27.19:04:59</LastIntrospectionLocalTimestamp>
+      <IntrospectionStateNumber>19461</IntrospectionStateNumber>
+      <LastIntrospectionLocalTimestamp>2024-05-27.20:08:24</LastIntrospectionLocalTimestamp>
       <ObjectId>2200</ObjectId>
       <StateNumber>523</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4268,7 +4276,7 @@ false Zulu
       <ObjectId>49229</ObjectId>
       <SequenceIdentity>1</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>17474</StateNumber>
+      <StateNumber>19460</StateNumber>
       <OwnerName>default</OwnerName>
     </sequence>
     <table id="269" parent="267" name="linkedin_profile">

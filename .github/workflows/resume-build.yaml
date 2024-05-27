@@ -1,10 +1,11 @@
 name: Continuous Integration Test
 
 on:
-  push:
-    branches:
-      - '**'
-
+  workflow_dispatch:
+    inputs:
+      id:
+        description: 'ID of the resume to build'
+        required: true
 jobs:
   build:
     runs-on: ubuntu-latest
