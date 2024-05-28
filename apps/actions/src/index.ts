@@ -1,7 +1,7 @@
 import { getInput } from '@actions/core'
 import { put } from '@vercel/blob'
 import { readFile, writeFile } from 'node:fs/promises'
-import { $, tempfile } from 'zx'
+import { $, tempdir, tempfile } from 'zx'
 import generateLatex from './generateLatex'
 
 const id = parseInt(getInput('id'))
@@ -16,7 +16,7 @@ const latex = generateLatex(json)
 await writeFile(latexFile, latex)
 
 const pdfFile = tempfile()
-$`latexmk -pdf -jobname=${pdfFile} ${latexFile}`
+$`latexmk -pdf -jobname=${pdfFile} ${latexFile} -output-directory=${tempdir()}`
 
 const buffer = await readFile(pdfFile)
 
