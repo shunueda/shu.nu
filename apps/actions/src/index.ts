@@ -1,7 +1,7 @@
 import { getInput } from '@actions/core'
 import { put } from '@vercel/blob'
 import { readFile, writeFile } from 'node:fs/promises'
-import { $, tempdir, tempfile } from 'zx'
+import { $ } from 'zx'
 import generateLatex from './generateLatex'
 
 const id = parseInt(getInput('id'))
@@ -11,14 +11,14 @@ const res = await fetch(`https://shu.nu/api/resume/data/${id}`, {
 })
 const json = await res.json()
 
-const latexFile = tempfile()
+const FILENAME = 'resume'
+
 const latex = generateLatex(json)
-await writeFile(latexFile, latex)
+await writeFile(`${FILENAME}.tex`, latex)
 
-const pdfFile = tempfile()
-$`latexmk -pdf -jobname=${pdfFile} ${latexFile} -output-directory=${tempdir()}`
+$`latexmk -pdf -jobname=${FILENAME}.pdf ${FILENAME}.tex`
 
-const buffer = await readFile(pdfFile)
+const buffer = await readFile(`${FILENAME}.pdf`)
 
 await put(id.toString(), buffer, {
   token: process.env.BLOB_READ_WRITE_TOKEN,
