@@ -5,10 +5,9 @@ inputs:
   id:
     description: 'ID of the resume to build'
     required: true
-
-outputs:
-  data:
-    description: 'temp output'
+  latex_path:
+    description: 'Path to the built Latex file'
+    required: true
 
 runs:
   using: node20

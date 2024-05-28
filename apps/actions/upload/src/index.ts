@@ -1,8 +1,14 @@
-import { getInput, setOutput } from '@actions/core'
-import { writeFileSync } from 'fs'
+import { getInput } from '@actions/core'
+import { put } from '@vercel/blob'
+import { readFileSync } from 'node:fs'
 
-const id = parseInt(getInput('id'))
+const id = getInput('id')
+const latexPath = getInput('latex_path')
+const pdfPath = latexPath.replace('.tex', '.pdf')
+const buffer = readFileSync(pdfPath)
 
-writeFileSync('a.txt', 'Hello, world!')
-
-setOutput('data', id)
+await put(id, buffer, {
+  token: process.env.BLOB_READ_WRITE_TOKEN,
+  access: 'public',
+  contentType: 'application/pdf'
+})
