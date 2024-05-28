@@ -16,28 +16,12 @@ const FILENAME = 'resume'
 const latex = generateLatex(json)
 await writeFile(`${FILENAME}.tex`, latex)
 
-try {
-  await $`latexmk -pdf ${FILENAME}.tex`
-} catch (error) {
-  console.error('Error running latexmk:', error)
-  process.exit(1)
-}
+$`latexmk -pdf ${FILENAME}.tex`
 
-let buffer
-try {
-  buffer = await readFile(`${FILENAME}.pdf`)
-} catch (error) {
-  console.error('Error reading PDF file:', error)
-  process.exit(1)
-}
+const buffer = await readFile(`${FILENAME}.pdf`)
 
-try {
-  await put(id.toString(), buffer, {
-    token: process.env.BLOB_READ_WRITE_TOKEN,
-    access: 'public',
-    contentType: 'application/pdf'
-  })
-} catch (error) {
-  console.error('Error uploading PDF:', error)
-  process.exit(1)
-}
+await put(id.toString(), buffer, {
+  token: process.env.BLOB_READ_WRITE_TOKEN,
+  access: 'public',
+  contentType: 'application/pdf'
+})
