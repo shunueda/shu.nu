@@ -38,7 +38,7 @@ jobs:
 
       - uses: xu-cheng/latex-action@v3
         with:
-          root_file: resume.tex
+          root_file: ${{ steps.latex.outputs.path }}
 
       - run: pnpm build
         working-directory: ${{ matrix.actions-directory }}/upload

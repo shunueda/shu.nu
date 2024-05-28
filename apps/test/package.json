@@ -1,0 +1,10 @@
+{
+  "name": "test",
+  "scripts": {
+    "start": "vite-node src/index.ts"
+  },
+  "dependencies": {
+    "shared": "workspace:*",
+    "vite-node": "^1.6.0"
+  }
+}

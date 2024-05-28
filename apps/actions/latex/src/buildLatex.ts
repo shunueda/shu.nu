@@ -1,194 +1,234 @@
-import {
-  Education,
-  Iso8601,
-  LinkedInProfile,
-  Profile,
-  Project,
-  Skill,
-  Work
-} from 'shared'
+import { LinkedInProfile } from 'shared'
+
+function escapeLatex(str: string): string {
+  return str.replace(/[&%$#_{}~^\\]/g, char => `\\${char}`)
+}
+
+function formatDate(startDate?: string, endDate?: string) {
+  const formatOptions: Intl.DateTimeFormatOptions = {
+    year: 'numeric',
+    month: 'long'
+  }
+
+  const formatMonthYear = (dateStr: string) => {
+    const date = new Date(dateStr)
+    return new Intl.DateTimeFormat('en-US', formatOptions).format(date)
+  }
+
+  if (startDate && endDate) {
+    return `${formatMonthYear(startDate)} -- ${formatMonthYear(endDate)}`
+  }
+
+  return startDate ? `${formatMonthYear(startDate)} -- Present` : ''
+}
+
+function buildSection(title: string, content: string): string {
+  return content
+    ? `
+    \\section{${escapeLatex(title)}}
+      ${content}
+  `
+    : ''
+}
+
+function buildSubheading(
+  institution: string,
+  location: string,
+  studyType: string,
+  area: string,
+  startDate: string,
+  endDate: string
+): string {
+  return `
+    \\resumeSubheading
+      {${escapeLatex(institution)}}{\\small ${escapeLatex(location)}}
+      {${escapeLatex(studyType)} ${area ? `: ${escapeLatex(area)}` : ''}}{${formatDate(startDate, endDate)}}
+  `
+}
+
+function buildResumeItemList(items: string[]): string {
+  return items.length
+    ? `
+    \\resumeItemListStart
+      ${items.map(item => `\\resumeItem{${escapeLatex(item)}}`).join('\n')}
+    \\resumeItemListEnd
+  `
+    : ''
+}
 
 export default function buildLatex(profile: LinkedInProfile): string {
   const { basics, education, work, projects, skills } = profile
 
-  const formatProfiles = (profiles: Profile[] = []) =>
-    profiles
-      .map(profile => {
-        return `\\href{${profile.url}}{\\underline{${profile.username}}}`
-      })
-      .join(' $|$ ')
-
-  const formatDate = (startDate?: Iso8601, endDate?: Iso8601) => {
-    if (startDate && endDate) {
-      return `${new Date(startDate).toLocaleDateString('en-US', {
-        month: 'short',
-        year: 'numeric'
-      })} -- ${new Date(endDate).toLocaleDateString('en-US', { month: 'short', year: 'numeric' })}`
-    }
-    return startDate
-      ? `${new Date(startDate).toLocaleDateString('en-US', {
-          month: 'short',
-          year: 'numeric'
-        })} -- Present`
-      : ''
-  }
-
-  const formatEducation = (education: Education[] = []) =>
-    education
-      .map(edu => {
-        return `
-    \\resumeSubheading
-      {${edu.institution}}{Bethlehem, PA}
-      {${edu.studyType} in ${edu.area}}{${formatDate(edu.startDate, edu.endDate)}}
-    `
-      })
-      .join('\n')
-
-  const formatWork = (work: Work[] = []) =>
-    work
-      .map(job => {
-        const highlights =
-          job.highlights
-            ?.map(highlight => `\\resumeItem{${highlight}}`)
-            .join('\n') || ''
-        return `
-    \\resumeSubheading
-      {${job.position}}{${formatDate(job.startDate, job.endDate)}}
-      {${job.name}}{${job.location}}
-      \\resumeItemListStart
-        ${highlights}
-      \\resumeItemListEnd
-    `
-      })
-      .join('\n')
-
-  const formatProjects = (projects: Project[] = []) =>
-    projects
-      .map(project => {
-        const highlights =
-          project.highlights
-            ?.map(highlight => `\\resumeItem{${highlight}}`)
-            .join('\n') || ''
-        return `
-    \\resumeProjectHeading
-      {\\textbf{${project.name}} $|$ \\emph{${project.keywords?.join(', ')}}}{${formatDate(project.startDate, project.endDate)}}
-      \\resumeItemListStart
-        ${highlights}
-      \\resumeItemListEnd
-    `
-      })
-      .join('\n')
-
-  const formatSkills = (skills: Skill[] = []) => {
-    const skillCategories = skills
-      .map(skill => `\\textbf{${skill.name}}{${skill.keywords?.join(', ')}}`)
-      .join(' \\\\\n')
+  const buildEducation = () => {
+    if (!education || education.length === 0) return ''
     return `
-    \\begin{itemize}[leftmargin=0.15in, label={}]
-      \\small{\\item{
-        ${skillCategories}
-      }}
-    \\end{itemize}
+      \\resumeSubHeadingListStart
+        ${education
+          .map(edu =>
+            buildSubheading(
+              edu.institution || '',
+              'Bethlehem, PA', // assuming location is Bethlehem, PA
+              edu.studyType || '',
+              edu.area || '',
+              edu.startDate || '',
+              edu.endDate || ''
+            )
+          )
+          .join('\n')}
+      \\resumeSubHeadingListEnd
     `
   }
+
+  const buildWork = () => {
+    if (!work || work.length === 0) return ''
+    return `
+      \\resumeSubHeadingListStart
+        ${work
+          .map(
+            job => `
+          \\resumeSubheading
+            {${escapeLatex(job.name || '')}}{\\small ${escapeLatex(job.location || '')}}
+            {${escapeLatex(job.position || '')}}{${formatDate(job.startDate, job.endDate)}}
+            \\resumeItemListStart
+              ${job.summary
+                ?.split('• ')
+                .filter(Boolean)
+                .map(
+                  highlight => `\\resumeItem{${escapeLatex(highlight.trim())}}`
+                )
+                .join('\n')}
+            \\resumeItemListEnd
+        `
+          )
+          .join('\n')}
+      \\resumeSubHeadingListEnd
+    `
+  }
+
+  const buildProjects = () => {
+    if (!projects || projects.length === 0) return ''
+    return `
+      \\resumeSubHeadingListStart
+        ${projects
+          .map(
+            project => `
+          \\resumeProjectHeading
+            {\\textbf{${escapeLatex(project.name || '')}} $|$ \\emph{${escapeLatex((project.keywords || []).join(', '))}}}{${formatDate(project.startDate, project.endDate)}}
+            ${buildResumeItemList(project.highlights || [])}
+        `
+          )
+          .join('\n')}
+      \\resumeSubHeadingListEnd
+    `
+  }
+
+  const buildSkills = () => {
+    if (!skills || skills.length === 0) return ''
+    return `
+      \\begin{itemize}[leftmargin=0.15in, label={}]
+        \\small{\\item{
+          ${skills.map(skill => `\\textbf{${escapeLatex(skill.name || '')}}${skill.keywords ? ': ' + escapeLatex(skill.keywords.join(', ')) : ''}`).join(' \\\\ ')}
+        }}
+      \\end{itemize}
+    `
+  }
+
+  const educationSection = buildEducation()
+  const workSection = buildWork()
+  const projectsSection = buildProjects()
+  const skillsSection = buildSkills()
 
   return `
-  \\documentclass[letterpaper,11pt]{article}
+    \\documentclass[letterpaper,11pt]{article}
 
-  \\usepackage{latexsym}
-  \\usepackage[empty]{fullpage}
-  \\usepackage{titlesec}
-  \\usepackage{marvosym}
-  \\usepackage[usenames,dvipsnames]{color}
-  \\usepackage{verbatim}
-  \\usepackage{enumitem}
-  \\usepackage[hidelinks]{hyperref}
-  \\usepackage{fancyhdr}
-  \\usepackage[english]{babel}
-  \\usepackage{tabularx}
-  \\input{glyphtounicode}
+    \\usepackage{latexsym}
+    \\usepackage[empty]{fullpage}
+    \\usepackage{titlesec}
+    \\usepackage{marvosym}
+    \\usepackage[usenames,dvipsnames]{color}
+    \\usepackage{verbatim}
+    \\usepackage{enumitem}
+    \\usepackage[hidelinks]{hyperref}
+    \\usepackage{fancyhdr}
+    \\usepackage[english]{babel}
+    \\usepackage{tabularx}
+    \\input{glyphtounicode}
 
-  \\pagestyle{fancy}
-  \\fancyhf{} % clear all header and footer fields
-  \\fancyfoot{}
-  \\renewcommand{\\headrulewidth}{0pt}
-  \\renewcommand{\\footrulewidth}{0pt}
+    \\pagestyle{fancy}
+    \\fancyhf{}
+    \\fancyfoot{}
+    \\renewcommand{\\headrulewidth}{0pt}
+    \\renewcommand{\\footrulewidth}{0pt}
 
-  \\addtolength{\\oddsidemargin}{-0.5in}
-  \\addtolength{\\evensidemargin}{-0.5in}
-  \\addtolength{\\textwidth}{1in}
-  \\addtolength{\\topmargin}{-.5in}
-  \\addtolength{\\textheight}{1.0in}
+    \\addtolength{\\oddsidemargin}{-0.5in}
+    \\addtolength{\\evensidemargin}{-0.5in}
+    \\addtolength{\\textwidth}{1in}
+    \\addtolength{\\topmargin}{-.5in}
+    \\addtolength{\\textheight}{1.0in}
 
-  \\urlstyle{same}
+    \\urlstyle{same}
 
-  \\raggedbottom
-  \\raggedright
-  \\setlength{\\tabcolsep}{0in}
+    \\raggedbottom
+    \\raggedright
+    \\setlength{\\tabcolsep}{0in}
 
-  \\titleformat{\\section}{
-    \\vspace{-4pt}\\scshape\\raggedright\\large
-  }{}{0em}{}[\\color{black}\\titlerule \\vspace{-5pt}]
+    \\titleformat{\\section}{
+      \\vspace{-4pt}\\scshape\\raggedright\\large
+    }{}{0em}{}[\\color{black}\\titlerule \\vspace{-5pt}]
 
-  \\pdfgentounicode=1
+    \\pdfgentounicode=1
 
-  \\newcommand{\\resumeItem}[1]{
-    \\item\\small{
-      {#1 \\vspace{-2pt}}
+    \\newcommand{\\resumeItem}[1]{
+      \\item\\small{
+        {#1 \\vspace{-2pt}}
+      }
     }
-  }
 
-  \\newcommand{\\resumeSubheading}[4]{
-    \\vspace{-2pt}\\item
-      \\begin{tabular*}{0.97\\textwidth}[t]{l@{\\extracolsep{\\fill}}r}
-        \\textbf{#1} & #2 \\\\
-        \\textit{\\small#3} & \\textit{\\small #4} \\\\
-      \\end{tabular*}\\vspace{-7pt}
-  }
+    \\newcommand{\\resumeSubheading}[4]{
+      \\vspace{-2pt}\\item
+        \\begin{tabular*}{0.97\\textwidth}[t]{l@{\\extracolsep{\\fill}}r}
+          \\textbf{#1} & #2 \\\\
+          \\textit{\\small#3} & \\textit{\\small #4} \\\\
+        \\end{tabular*}\\vspace{-7pt}
+    }
 
-  \\newcommand{\\resumeSubSubheading}[2]{
-      \\item
-      \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
-        \\textit{\\small#1} & \\textit{\\small #2} \\\\
-      \\end{tabular*}\\vspace{-7pt}
-  }
+    \\newcommand{\\resumeSubSubheading}[2]{
+        \\item
+        \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
+          \\textit{\\small#1} & \\textit{\\small #2} \\\\
+        \\end{tabular*}\\vspace{-7pt}
+    }
 
-  \\newcommand{\\resumeProjectHeading}[2]{
-      \\item
-      \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
-        \\small#1 & #2 \\\\
-      \\end{tabular*}\\vspace{-7pt}
-  }
+    \\newcommand{\\resumeProjectHeading}[2]{
+        \\item
+        \\begin{tabular*}{0.97\\textwidth}{l@{\\extracolsep{\\fill}}r}
+          \\small#1 & #2 \\\\
+        \\end{tabular*}\\vspace{-7pt}
+    }
 
-  \\newcommand{\\resumeSubItem}[1]{\\resumeItem{#1}\\vspace{-4pt}}
+    \\newcommand{\\resumeSubItem}[1]{\\resumeItem{#1}\\vspace{-4pt}}
 
-  \\renewcommand\\labelitemii{$\\vcenter{\\hbox{\\tiny$\\bullet$}}$}
+    \\renewcommand\\labelitemii{$\\vcenter{\\hbox{\\tiny$\\bullet$}}$}
 
-  \\newcommand{\\resumeSubHeadingListStart}{\\begin{itemize}[leftmargin=0.15in, label={}]}
-  \\newcommand{\\resumeSubHeadingListEnd}{\\end{itemize}}
-  \\newcommand{\\resumeItemListStart}{\\begin{itemize}}
-  \\newcommand{\\resumeItemListEnd}{\\end{itemize}\\vspace{-5pt}}
+    \\newcommand{\\resumeSubHeadingListStart}{\\begin{itemize}[leftmargin=0.15in, label={}]}
+    \\newcommand{\\resumeSubHeadingListEnd}{\\end{itemize}}
+    \\newcommand{\\resumeItemListStart}{\\begin{itemize}}
+    \\newcommand{\\resumeItemListEnd}{\\end{itemize}\\vspace{-5pt}}
 
-  \\begin{document}
+    \\begin{document}
 
-  \\begin{center}
-      \\textbf{\\Huge \\scshape ${basics?.name}} \\\\ \\vspace{1pt}
-      \\small ${basics?.phone} $|$ \\href{mailto:${basics?.email}}{\\underline{${basics?.email}}} $|$ 
-      ${formatProfiles(basics?.profiles)} $|$
-  \\end{center}
+    \\begin{center}
+        \\textbf{\\Huge \\scshape ${escapeLatex(basics?.name || '')}} \\\\ \\vspace{1pt}
+        \\small ${escapeLatex(basics?.phone || '')} $|$ \\href{mailto:${escapeLatex(basics?.email || '')}}{\\underline{${escapeLatex(basics?.email || '')}}} $|$ 
+        \\href{${escapeLatex(basics?.profiles?.find(p => p.network === 'LinkedIn')?.url || '')}}{\\underline{${escapeLatex(basics?.profiles?.find(p => p.network === 'LinkedIn')?.url || '')}}} $|$
+        \\href{${escapeLatex(basics?.profiles?.find(p => p.network === 'GitHub')?.url || '')}}{\\underline{${escapeLatex(basics?.profiles?.find(p => p.network === 'GitHub')?.url || '')}}}
+    \\end{center}
 
-  \\section{Education}
-    ${formatEducation(education)}
+    ${buildSection('Education', educationSection)}
+    ${buildSection('Experience', workSection)}
+    ${buildSection('Projects', projectsSection)}
+    ${buildSection('Technical Skills', skillsSection)}
 
-  \\section{Experience}
-    ${formatWork(work)}
-
-  \\section{Projects}
-    ${formatProjects(projects)}
-
-  \\section{Technical Skills}
-    ${formatSkills(skills)}
-
-  \\end{document}
+    \\end{document}
   `
 }
