@@ -56,7 +56,7 @@ function buildResumeItemList(items: string[]): string {
     : ''
 }
 
-export default function buildLatex(profile: LinkedInProfile): string {
+export default function generateLatex(profile: LinkedInProfile): string {
   const { basics, education, work, projects, skills } = profile
 
   const buildEducation = () => {

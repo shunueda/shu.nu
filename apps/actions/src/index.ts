@@ -2,7 +2,7 @@ import { getInput } from '@actions/core'
 import { put } from '@vercel/blob'
 import { readFile, writeFile } from 'node:fs/promises'
 import { $, tempfile } from 'zx'
-import buildLatex from './buildLatex'
+import generateLatex from './generateLatex'
 
 const id = parseInt(getInput('id'))
 
@@ -12,7 +12,7 @@ const res = await fetch(`https://shu.nu/api/resume/data/${id}`, {
 const json = await res.json()
 
 const latexFile = tempfile()
-const latex = buildLatex(json)
+const latex = generateLatex(json)
 await writeFile(latexFile, latex)
 
 const pdfFile = tempfile()

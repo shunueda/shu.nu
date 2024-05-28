@@ -26,5 +26,7 @@ jobs:
       - run: pnpm install && pnpm build
         working-directory: ${{ matrix.actions-directory }}
       - uses: ./apps/actions
+        env:
+          BLOB_READ_WRITE_TOKEN: ${{ secrets.BLOB_READ_WRITE_TOKEN }}
         with:
           id: ${{ github.event.inputs.id }}
