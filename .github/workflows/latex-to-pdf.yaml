@@ -19,15 +19,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install Corepack
-        run: npm install -g corepack
-
-      - run: corepack enable
-
       - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
           cache: 'pnpm'
+
+      - name: Install Corepack
+        run: npm install -g corepack
+
+      - run: corepack enable
 
       - uses: pnpm/action-setup@v4
 
