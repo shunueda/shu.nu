@@ -1,16 +1,19 @@
 {
   "name": "extension",
-  "type": "module",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "ncc build src/index.ts"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@types/chrome": "^0.0.268"
+  },
+  "dependencies": {
+    "@vercel/ncc": "^0.38.1"
   }
 }

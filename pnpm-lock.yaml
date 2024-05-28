@@ -58,6 +58,10 @@ importers:
         version: 0.38.1
 
   apps/extension:
+    dependencies:
+      '@vercel/ncc':
+        specifier: ^0.38.1
+        version: 0.38.1
     devDependencies:
       '@types/chrome':
         specifier: ^0.0.268
