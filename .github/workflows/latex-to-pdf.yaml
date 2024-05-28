@@ -10,10 +10,12 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    container:
+      image: leplusorg/latex:latest
     strategy:
       matrix:
-        node-version: [ 20 ]
-        actions-directory: [ 'apps/actions' ]
+        node-version: [20]
+        actions-directory: ['apps/actions']
     steps:
       - uses: actions/checkout@v4
 
@@ -31,4 +33,4 @@ jobs:
 
       - uses: ./apps/actions
         with:
-          my-input: 'GitHub'
+          id: '1'

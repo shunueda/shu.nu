@@ -1,10 +1,15 @@
-name: 'My Docker Action'
-description: 'My GitHub Action using Docker'
+name: 'Build Latex'
+description: 'Build Latex using JSON data'
+
 inputs:
-  my-input:
-    description: 'An input for my action'
+  id:
+    description: 'ID of the resume to build'
     required: true
-    default: 'world'
+
+outputs:
+  path:
+    description: 'Path to the built Latex file'
+
 runs:
-  using: 'docker'
-  image: 'Dockerfile'
+  using: node20
+  main: dist/index.js
