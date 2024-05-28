@@ -7,7 +7,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "prepare": "husky",
+    "prepare": "pnpm exec husky",
     "format": "prettier --ignore-path .gitignore \"**/*.+(ts|tsx|js|yaml|json)\" --write"
   },
   "devDependencies": {
