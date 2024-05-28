@@ -49,41 +49,6 @@ importers:
         specifier: ^0.38.1
         version: 0.38.1
 
-  apps/actions/latex:
-    dependencies:
-      '@actions/core':
-        specifier: ^1.10.1
-        version: 1.10.1
-      shared:
-        specifier: workspace:*
-        version: link:../../shared
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      '@vercel/ncc':
-        specifier: ^0.38.1
-        version: 0.38.1
-
-  apps/actions/upload:
-    dependencies:
-      '@actions/core':
-        specifier: ^1.10.1
-        version: 1.10.1
-      '@vercel/blob':
-        specifier: ^0.23.3
-        version: 0.23.3
-      shared:
-        specifier: workspace:*
-        version: link:../../shared
-    devDependencies:
-      '@types/node':
-        specifier: ^20.12.12
-        version: 20.12.12
-      '@vercel/ncc':
-        specifier: ^0.38.1
-        version: 0.38.1
-
   apps/extension:
     devDependencies:
       '@types/chrome':
