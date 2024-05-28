@@ -4,16 +4,15 @@
   "manifest_version": 3,
   "version": "0.1",
   "description": "",
-  "permissions": [
-    "activeTab",
-    "scripting"
-  ],
+  "permissions": ["activeTab", "scripting"],
   "background": {
     "type": "module",
     "service_worker": "service-worker.js"
   },
-  "web_accessible_resources": [{
-    "matches": ["<all_urls>"],
-    "resources": ["lib/LinkedInToResume.mjs"]
-  }]
+  "web_accessible_resources": [
+    {
+      "matches": ["<all_urls>"],
+      "resources": ["lib/LinkedInToResume.mjs"]
+    }
+  ]
 }
