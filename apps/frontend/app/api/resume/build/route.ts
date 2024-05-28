@@ -14,6 +14,6 @@ export async function POST(req: NextRequest) {
     })
     .returning('id')
     .executeTakeFirst()
-  await triggerWorkflow('latexToPdf.yaml', { id: result.id.toString() })
+  await triggerWorkflow('latex-to-pdf.yaml', { id: result.id.toString() })
   return cors(req, NextResponse.json(result))
 }

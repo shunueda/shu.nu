@@ -1,0 +1,34 @@
+name: Build Latex to PDF
+
+on:
+  workflow_dispatch:
+    inputs:
+      id:
+        description: 'ID of the resume to build'
+        required: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [ 20 ]
+        actions-directory: [ 'apps/actions' ]
+    steps:
+      - uses: actions/checkout@v4
+
+      - run: corepack enable
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'pnpm'
+
+      - uses: pnpm/action-setup@v4
+
+      - run: pnpm install && pnpm build
+        working-directory: ${{ matrix.actions-directory }}
+
+      - uses: ./apps/actions
+        with:
+          my-input: 'GitHub'

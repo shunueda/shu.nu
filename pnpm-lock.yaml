@@ -22,6 +22,25 @@ importers:
         specifier: ^3.2.4
         version: 3.2.4(prettier@3.2.5)(typescript@5.4.5)
 
+  apps/actions:
+    dependencies:
+      '@actions/core':
+        specifier: ^1.10.1
+        version: 1.10.1
+      '@vercel/blob':
+        specifier: ^0.23.3
+        version: 0.23.3
+      shared:
+        specifier: workspace:*
+        version: link:../shared
+    devDependencies:
+      '@types/node':
+        specifier: ^20.12.12
+        version: 20.12.12
+      '@vercel/ncc':
+        specifier: ^0.38.1
+        version: 0.38.1
+
   apps/actions/latex:
     dependencies:
       '@actions/core':

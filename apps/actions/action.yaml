@@ -1,0 +1,10 @@
+name: 'TeXLive Docker Action'
+description: 'A GitHub Action with TeXLive installed in a minimal Docker container'
+inputs:
+  my-input:
+    description: 'An input for my action'
+    required: true
+    default: 'world'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
