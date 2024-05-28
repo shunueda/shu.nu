@@ -7,10 +7,11 @@ chrome.action.onClicked.addListener(async tab => {
   await chrome.scripting.executeScript({
     target: { tabId: tab.id },
     func: async () => {
-      const src = chrome.runtime.getURL('src/main.js')
+      const src = chrome.runtime.getURL('lib/LinkedInToResume.mjs')
       await import(src)
       const resume = new LinkedinToResumeJson()
       const body = await resume.parseAndGetRawJson()
+      console.log(body)
       await fetch('https://shu.nu/api/resume/build', {
         method: 'POST',
         body: JSON.stringify(body),
