@@ -38,6 +38,9 @@ importers:
       shared:
         specifier: workspace:*
         version: link:../shared
+      zx:
+        specifier: ^8.1.2
+        version: 8.1.2
     devDependencies:
       '@types/node':
         specifier: ^20.12.12
@@ -937,10 +940,22 @@ packages:
         integrity: sha512-xFU8ZXTw4gd358lb2jw25nxY9QAgqn2+bKKjKOYfNCzN4DKCFetK7sPtrlpg66Ywe3vWY9FNxprZawAh9wfJ3g==
       }
 
+  '@types/fs-extra@11.0.4':
+    resolution:
+      {
+        integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==
+      }
+
   '@types/har-format@1.2.15':
     resolution:
       {
         integrity: sha512-RpQH4rXLuvTXKR0zqHq3go0RVXYv/YVqv4TnPH95VbwUxZdQlK1EtcMvQvMpDngHbt13Csh9Z4qT9AbkiQH5BA==
+      }
+
+  '@types/jsonfile@6.1.4':
+    resolution:
+      {
+        integrity: sha512-D5qGUYwjvnNNextdU59/+fI+spnwtTFmyQP0h+PfIOSkNfpU6AOICUOkm4i0OnSk+NyjdPJrxCDro0sJsWlRpQ==
       }
 
   '@types/node@20.12.12':
@@ -2185,6 +2200,14 @@ packages:
     engines: { node: '>= 14' }
     hasBin: true
 
+  zx@8.1.2:
+    resolution:
+      {
+        integrity: sha512-zkCiXKh8D/eo6r58OmJvO5mc2NthcSRvysb3fuS6VQlHPbEPBcxduRwM3m6ZfHj+7cLHcrahCnuO2TDAbW+6xw==
+      }
+    engines: { node: '>= 12.17.0' }
+    hasBin: true
+
 snapshots:
   '@actions/core@1.10.1':
     dependencies:
@@ -2569,7 +2592,18 @@ snapshots:
 
   '@types/filewriter@0.0.33': {}
 
+  '@types/fs-extra@11.0.4':
+    dependencies:
+      '@types/jsonfile': 6.1.4
+      '@types/node': 20.12.12
+    optional: true
+
   '@types/har-format@1.2.15': {}
+
+  '@types/jsonfile@6.1.4':
+    dependencies:
+      '@types/node': 20.12.12
+    optional: true
 
   '@types/node@20.12.12':
     dependencies:
@@ -3235,3 +3269,8 @@ snapshots:
   xtend@4.0.2: {}
 
   yaml@2.4.2: {}
+
+  zx@8.1.2:
+    optionalDependencies:
+      '@types/fs-extra': 11.0.4
+      '@types/node': 20.12.12

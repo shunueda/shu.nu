@@ -27,4 +27,4 @@ jobs:
         working-directory: ${{ matrix.actions-directory }}
       - uses: ./apps/actions
         with:
-          id: '1'
+          id: ${{ github.event.inputs.id }}
