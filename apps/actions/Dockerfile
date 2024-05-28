@@ -1,11 +1,15 @@
 FROM ubuntu:20.04
 
+# Set the environment variable to prevent interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
 # Install dependencies
 RUN apt-get update && apt-get install -y \
   texlive-latex-base \
   texlive-fonts-recommended \
   texlive-latex-recommended \
   texlive-latex-extra \
+  tzdata \
   && rm -rf /var/lib/apt/lists/*
 
 # Install Node.js
