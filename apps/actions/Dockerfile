@@ -1,21 +1,27 @@
-# Use a minimal Debian-based image
-FROM debian:bullseye-slim
+FROM ubuntu:20.04
 
-# Install dependencies and TeXLive
-RUN apt-get update && \
-    apt-get install -y --no-install-recommends \
-    texlive-full \
-    ca-certificates \
-    curl \
-    gnupg \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+# Install dependencies
+RUN apt-get update && apt-get install -y \
+  texlive-latex-base \
+  texlive-fonts-recommended \
+  texlive-latex-recommended \
+  texlive-latex-extra \
+  && rm -rf /var/lib/apt/lists/*
 
-# Set up a working directory
-WORKDIR /workspace
+# Install Node.js
+RUN apt-get update && apt-get install -y curl && \
+  curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
+  apt-get install -y nodejs
 
-# Copy your action files to the Docker image
+# Create app directory
+WORKDIR /usr/src/app
+
+# Install app dependencies
+COPY package*.json ./
+RUN npm install --only=production
+
+# Bundle app source
 COPY dist/ ./dist/
 
-# Set the entrypoint to your action script
+# Run the application
 ENTRYPOINT ["node", "dist/index.js"]

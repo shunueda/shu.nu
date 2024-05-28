@@ -1,3 +1,14 @@
-import { setOutput } from '@actions/core'
+import * as core from '@actions/core'
 
-setOutput('data', 42)
+async function run() {
+  try {
+    const myInput = core.getInput('my-input')
+    core.info(`My input is: ${myInput}`)
+  } catch (error) {
+    if (error instanceof Error) {
+      core.setFailed(error.message)
+    }
+  }
+}
+
+run()

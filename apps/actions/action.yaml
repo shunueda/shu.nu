@@ -1,5 +1,5 @@
-name: 'TeXLive Docker Action'
-description: 'A GitHub Action with TeXLive installed in a minimal Docker container'
+name: 'My Docker Action'
+description: 'My GitHub Action using Docker'
 inputs:
   my-input:
     description: 'An input for my action'
