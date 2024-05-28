@@ -16,7 +16,7 @@ const FILENAME = 'resume'
 const latex = generateLatex(json)
 await writeFile(`${FILENAME}.tex`, latex)
 
-$`latexmk -pdf -jobname=${FILENAME}.pdf ${FILENAME}.tex`
+$`latexmk -pdf ${FILENAME}.tex`
 
 const buffer = await readFile(`${FILENAME}.pdf`)
 
