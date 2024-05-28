@@ -1,4 +1,8 @@
-export default function Page() {
+import { list } from '@vercel/blob'
+
+export default async function Page() {
+  const response = await list()
+  return <>{response.blobs.map(it => it.pathname)}</>
   // return (
   //   <section>
   //     <h1 className='text-4xl font-semibold tracking-tighter'>{resume.name}</h1>
@@ -24,5 +28,4 @@ export default function Page() {
   //     ))}
   //   </section>
   // )
-  return <>EMPTY</>
 }

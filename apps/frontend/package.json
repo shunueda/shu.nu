@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -H $(ifconfig $(route -n get default | awk '/interface: / {print $2}') | awk '/inet / {print $2}')",
+    "dev": "next dev",
+    "dev:ip": "next dev -H $(ifconfig $(route -n get default | awk '/interface: / {print $2}') | awk '/inet / {print $2}')",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
