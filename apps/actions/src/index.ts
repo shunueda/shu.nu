@@ -15,7 +15,8 @@ const filename = tempfile()
 const latex = generateLatex(json)
 await writeFile(filename, latex)
 
-await $`latexmk -pdf ${filename}`
+const out = await $`latexmk -pdf ${filename}`
+console.log(out.message)
 
 const buffer = await readFile(`${filename}.pdf`)
 
