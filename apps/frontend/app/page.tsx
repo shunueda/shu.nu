@@ -1,8 +1,4 @@
-import getResume from '@/lib/blobs/getResume'
-
 export default async function Page() {
-  const resume = await getResume()
-  console.log(resume)
   return <></>
   // return (
   //   <section>

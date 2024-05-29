@@ -1,3 +1,3 @@
 export enum Config {
-  BLOB_RESUME_FOLDER = 'resume'
+  BLOB_RESUME_FOLDER = 'resumes'
 }
