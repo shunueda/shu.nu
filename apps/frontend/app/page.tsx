@@ -1,8 +1,9 @@
-import { list } from '@vercel/blob'
+import getResume from '@/lib/blobs/getResume'
 
 export default async function Page() {
-  const response = await list()
-  return <>{response.blobs.map(it => it.pathname)}</>
+  const resume = await getResume()
+  console.log(resume)
+  return <></>
   // return (
   //   <section>
   //     <h1 className='text-4xl font-semibold tracking-tighter'>{resume.name}</h1>

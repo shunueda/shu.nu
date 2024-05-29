@@ -1,6 +1,7 @@
 import { getInput } from '@actions/core'
 import { put } from '@vercel/blob'
 import { readFile } from 'node:fs/promises'
+import { Config } from 'shared'
 import { $, tempfile } from 'zx'
 import generateLatex from './generateLatex'
 
@@ -17,7 +18,7 @@ await $`latexmk -pdf ${tempfile(id, latex)}`
 
 // upload artifact
 const buffer = await readFile(`${id}.pdf`)
-await put(id, buffer, {
+await put(`${Config.BLOB_RESUME_FOLDER}/${id}`, buffer, {
   token: process.env.BLOB_READ_WRITE_TOKEN,
   access: 'public',
   contentType: 'application/pdf'
