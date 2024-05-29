@@ -1,4 +1,4 @@
-name: Build Latex to PDF
+name: Build LaTeX to PDF
 
 on:
   workflow_dispatch:

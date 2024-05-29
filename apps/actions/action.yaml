@@ -1,14 +1,10 @@
-name: 'Build Latex'
-description: 'Build Latex using JSON data'
+name: Build LaTeX to PDF
+description: Build Latex from ID
 
 inputs:
   id:
     description: 'ID of the resume to build'
     required: true
-
-outputs:
-  path:
-    description: 'Path to the built Latex file'
 
 runs:
   using: node20
