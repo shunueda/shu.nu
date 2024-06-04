@@ -1,25 +1,7 @@
-import { LinkedInProfile } from 'shared'
+import { formatDateToLatex, LinkedInProfile } from 'shared'
 
 function escapeLatex(str: string): string {
   return str.replace(/[&%$#_{}~^\\]/g, char => `\\${char}`)
-}
-
-function formatDate(startDate?: string, endDate?: string) {
-  const formatOptions: Intl.DateTimeFormatOptions = {
-    year: 'numeric',
-    month: 'long'
-  }
-
-  const formatMonthYear = (dateStr: string) => {
-    const date = new Date(dateStr)
-    return new Intl.DateTimeFormat('en-US', formatOptions).format(date)
-  }
-
-  if (startDate && endDate) {
-    return `${formatMonthYear(startDate)} -- ${formatMonthYear(endDate)}`
-  }
-
-  return startDate ? `${formatMonthYear(startDate)} -- Present` : ''
 }
 
 function buildSection(title: string, content: string): string {
@@ -42,7 +24,7 @@ function buildSubheading(
   return `
      \\resumeSubheading
        {${escapeLatex(institution)}}{\\small ${escapeLatex(location)}}
-       {${escapeLatex(studyType)} ${area ? `: ${escapeLatex(area)}` : ''}}{${formatDate(startDate, endDate)}}
+       {${escapeLatex(studyType)} ${area ? `: ${escapeLatex(area)}` : ''}}{${formatDateToLatex(startDate, endDate)}}
    `
 }
 
@@ -88,7 +70,7 @@ export default function generateLatex(profile: LinkedInProfile): string {
              job => `
            \\resumeSubheading
              {${escapeLatex(job.name || '')}}{\\small ${escapeLatex(job.location || '')}}
-             {${escapeLatex(job.position || '')}}{${formatDate(job.startDate, job.endDate)}}
+             {${escapeLatex(job.position || '')}}{${formatDateToLatex(job.startDate, job.endDate)}}
              \\resumeItemListStart
                ${job.summary
                  ?.split('• ')
@@ -113,7 +95,7 @@ export default function generateLatex(profile: LinkedInProfile): string {
            .map(
              project => `
            \\resumeProjectHeading
-             {\\textbf{${escapeLatex(project.name || '')}} $|$ \\emph{${escapeLatex((project.keywords || []).join(', '))}}}{${formatDate(project.startDate, project.endDate)}}
+             {\\textbf{${escapeLatex(project.name || '')}} $|$ \\emph{${escapeLatex((project.keywords || []).join(', '))}}}{${formatDateToLatex(project.startDate, project.endDate)}}
              ${buildResumeItemList(project.highlights || [])}
          `
            )

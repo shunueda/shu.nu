@@ -28,5 +28,8 @@
     "sass": "^1.77.1",
     "shared": "workspace:*",
     "tailwindcss": "4.0.0-alpha.13"
+  },
+  "devDependencies": {
+    "@types/download": "^8.0.5"
   }
 }

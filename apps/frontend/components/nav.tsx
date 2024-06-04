@@ -1,12 +1,24 @@
+import { list } from '@vercel/blob'
 import Link from 'next/link'
+import { Config } from 'shared'
+
+const { blobs } = await list({
+  mode: 'folded',
+  prefix: `${Config.BLOB_RESUME_FOLDER}/`
+})
+const resume = blobs
+  .sort((a, b) => (a.uploadedAt > b.uploadedAt ? -1 : 1))
+  .at(0)
 
 export const navItems: Record<string, string> = {
   // email: `mailto:${resume.email}`,
+  home: '/',
+  resume: resume.downloadUrl,
   linkedin: 'https://www.linkedin.com/in/shunueda/',
   github: 'https://github.com/shunueda'
 }
 
-export function Navbar() {
+export async function Navbar() {
   return (
     <aside className='-ml-[8px] mb-16 tracking-tight'>
       <div className='lg:sticky lg:top-20'>
@@ -21,7 +33,7 @@ export function Navbar() {
                   key={path}
                   href={path}
                   rel='noopener noreferrer'
-                  target='_blank'
+                  target={path.startsWith('http') ? '_blank' : '_self'}
                   className='transition-all hover:text-neutral-800 dark:hover:text-neutral-200 flex align-middle relative py-1 px-2 m-1'
                 >
                   {name}

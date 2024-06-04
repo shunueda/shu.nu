@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/apps/frontend/lib/blobs/getBlobs.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/shared/src/util.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/website/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/src/generateLatex.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/actions/src/generateLatex.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/build/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/api/resume/build/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/data/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/api/resume/data/[id]/route.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/resume/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/components/nav.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/blobs/getResumes.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/postgres/getDatabase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/lib/postgres/database.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/assets/diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagram.drawio" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +39,14 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="KubernetesApiPersistence">{}</component>
+  <component name="KubernetesApiProvider">{
+  &quot;isMigrated&quot;: true
+}</component>
   <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/apps/website/package.json" />
+    <dismissed value="$PROJECT_DIR$/apps/actions/package.json" />
+    <dismissed value="$PROJECT_DIR$/apps/extension/package.json" />
+    <dismissed value="$PROJECT_DIR$/apps/frontend/package.json" />
     <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
@@ -41,38 +63,43 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/shu-nu/apps/website",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "/Users/me/dev/shunueda/shu-nu/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "ts.external.directory.path": "/Users/me/dev/shunueda/shu-nu/node_modules/typescript/lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/me/dev/shunueda/shu-nu/apps/actions&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;/Users/me/dev/shunueda/shu-nu/node_modules/prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;settings.typescriptcompiler&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;/Users/me/dev/shunueda/shu-nu/node_modules/typescript/lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/SQL Dialect&quot;: [
+      &quot;PostgreSQL&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/website" />
-      <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/website/public" />
-      <recent name="$PROJECT_DIR$/apps/resume" />
+      <recent name="$PROJECT_DIR$/apps/actions" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/apps/extension" />
+      <recent name="$PROJECT_DIR$/apps/test" />
+      <recent name="$PROJECT_DIR$/apps/actions/pdf" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/website/app" />
-      <recent name="$PROJECT_DIR$/apps/website/src/lib" />
-      <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/shared/src" />
-      <recent name="$PROJECT_DIR$/apps/resume/src" />
+      <recent name="$PROJECT_DIR$/apps/frontend/public" />
+      <recent name="$PROJECT_DIR$/apps/actions/src" />
+      <recent name="$PROJECT_DIR$/apps/extension" />
+      <recent name="$PROJECT_DIR$/apps/extension/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -94,6 +121,11 @@
       <workItem from="1715392238091" duration="35513000" />
       <workItem from="1715616293584" duration="6635000" />
       <workItem from="1716519703244" duration="2909000" />
+      <workItem from="1716966400366" duration="4000" />
+      <workItem from="1716973315039" duration="1684000" />
+      <workItem from="1717013681154" duration="2191000" />
+      <workItem from="1717026306313" duration="7226000" />
+      <workItem from="1717133516882" duration="934000" />
     </task>
     <servers />
   </component>

@@ -49,6 +49,8 @@ importers:
         specifier: ^0.38.1
         version: 0.38.1
 
+  apps/actions/dist: {}
+
   apps/extension:
     devDependencies:
       '@types/chrome':
@@ -111,6 +113,10 @@ importers:
       tailwindcss:
         specifier: 4.0.0-alpha.13
         version: 4.0.0-alpha.13
+    devDependencies:
+      '@types/download':
+        specifier: ^8.0.5
+        version: 8.0.5
 
   apps/shared:
     dependencies:
@@ -887,6 +893,18 @@ packages:
         integrity: sha512-7N1QH9buudSJ7sI8Pe4mBHJr5oZ48s0hcanI9w3wgijAlv1OZNUZve9JR4x42dn5lJ5Sm87V1JNfnoh10EnQlA==
       }
 
+  '@types/decompress@4.2.7':
+    resolution:
+      {
+        integrity: sha512-9z+8yjKr5Wn73Pt17/ldnmQToaFHZxK0N1GHysuk/JIPT8RIdQeoInM01wWPgypRcvb6VH1drjuFpQ4zmY437g==
+      }
+
+  '@types/download@8.0.5':
+    resolution:
+      {
+        integrity: sha512-Ad68goc/BsL3atP3OP/lWKAKhiC6FduN1mC5yg9lZuGYmUY7vyoWBcXgt8GE9OzVWRq5IBXwm4o/QiE+gipZAg==
+      }
+
   '@types/estree@1.0.5':
     resolution:
       {
@@ -909,6 +927,12 @@ packages:
     resolution:
       {
         integrity: sha512-yTbItCNreRooED33qjunPthRcSjERP1r4MqCZc7wv0u2sUkzTFp45tgUfS5+r7FrZPdmCCNflLhVSP/o+SemsQ==
+      }
+
+  '@types/got@9.6.12':
+    resolution:
+      {
+        integrity: sha512-X4pj/HGHbXVLqTpKjA2ahI4rV/nNBc9mGO2I/0CgAra+F2dKgMXnENv2SRpemScBzBAI4vMelIVYViQxlSE6xA==
       }
 
   '@types/har-format@1.2.15':
@@ -957,6 +981,12 @@ packages:
     resolution:
       {
         integrity: sha512-YIoDCTH3Af6XM5VuwGG/QL/CJqga1Zm3NkU3HZ4ZHK2fRMPYP1VczsTUqtsf43PH/iJNVlPHAo2oWX7BSdB2Hw==
+      }
+
+  '@types/tough-cookie@4.0.5':
+    resolution:
+      {
+        integrity: sha512-/Ad8+nIOV7Rl++6f1BdKxFSMgmoqEoYbHRpPcx3JEfv8VRsQe9Z4mCXeJBzxs7mbHY/XOZZuXlRNfhpVPbs6ZA==
       }
 
   '@vercel/analytics@1.3.1':
@@ -1070,6 +1100,12 @@ packages:
         integrity: sha512-wfr/jstw9xNi/0teMHrRW7dsz3Lt5ARhYNZ2ewpadnhaIp5mbALhOAP+EAdsC7t4Z6wqsDVv9+W6gm1Dk9mEyw==
       }
 
+  asynckit@0.4.0:
+    resolution:
+      {
+        integrity: sha512-Oei9OH4tRh0YqU3GxhX79dM/mwVgvbZJaSNaRk+bshkj0S5cfHcgYakreBjrHwatXKbz+IoIdYLxrKim2MjW0Q==
+      }
+
   before-after-hook@3.0.2:
     resolution:
       {
@@ -1177,6 +1213,13 @@ packages:
         integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==
       }
 
+  combined-stream@1.0.8:
+    resolution:
+      {
+        integrity: sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg==
+      }
+    engines: { node: '>= 0.8' }
+
   commander@12.1.0:
     resolution:
       {
@@ -1208,6 +1251,13 @@ packages:
     peerDependenciesMeta:
       supports-color:
         optional: true
+
+  delayed-stream@1.0.0:
+    resolution:
+      {
+        integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==
+      }
+    engines: { node: '>=0.4.0' }
 
   detect-libc@1.0.3:
     resolution:
@@ -1257,6 +1307,13 @@ packages:
         integrity: sha512-YsGpe3WHLK8ZYi4tWDg2Jy3ebRz2rXowDxnld4bkQB00cc/1Zw9AWnC0i9ztDJitivtQvaI9KaLyKrc+hBW0yg==
       }
     engines: { node: '>=8' }
+
+  form-data@2.5.1:
+    resolution:
+      {
+        integrity: sha512-m21N3WOmEEURgk6B9GLOE4RuWOFf28Lhh9qGYeNlGq4VDXUlJy2th2slBNU8Gp8EzloYZOibZJ7t5ecIrFSjVA==
+      }
+    engines: { node: '>= 0.12' }
 
   fsevents@2.3.3:
     resolution:
@@ -1566,6 +1623,20 @@ packages:
         integrity: sha512-LPP/3KorzCwBxfeUuZmaR6bG2kdeHSbe0P2tY3FLRU4vYrjYz5hI4QZwV0njUx3jeuKe67YukQ1LSPZBKDqO/Q==
       }
     engines: { node: '>=8.6' }
+
+  mime-db@1.52.0:
+    resolution:
+      {
+        integrity: sha512-sPU4uV7dYlvtWJxwwxHD0PuihVNiE7TyAbQ5SWxDCB9mUYvOgroQOwYQQOKPJ8CIbE+1ETVlOoK1UC2nU3gYvg==
+      }
+    engines: { node: '>= 0.6' }
+
+  mime-types@2.1.35:
+    resolution:
+      {
+        integrity: sha512-ZDY+bPm5zTTF+YpCrAU9nK0UgICYPT0QtT1NZWFv4s++TNkcgVaT0g6+4R2uI4MjQjzysHB1zxuWL50hzaeXiw==
+      }
+    engines: { node: '>= 0.6' }
 
   mimic-fn@2.1.0:
     resolution:
@@ -2549,6 +2620,16 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.15
 
+  '@types/decompress@4.2.7':
+    dependencies:
+      '@types/node': 20.12.12
+
+  '@types/download@8.0.5':
+    dependencies:
+      '@types/decompress': 4.2.7
+      '@types/got': 9.6.12
+      '@types/node': 20.12.12
+
   '@types/estree@1.0.5': {}
 
   '@types/filesystem@0.0.36':
@@ -2562,6 +2643,12 @@ snapshots:
       '@types/jsonfile': 6.1.4
       '@types/node': 20.12.12
     optional: true
+
+  '@types/got@9.6.12':
+    dependencies:
+      '@types/node': 20.12.12
+      '@types/tough-cookie': 4.0.5
+      form-data: 2.5.1
 
   '@types/har-format@1.2.15': {}
 
@@ -2593,6 +2680,8 @@ snapshots:
       csstype: 3.1.3
 
   '@types/scheduler@0.23.0': {}
+
+  '@types/tough-cookie@4.0.5': {}
 
   '@vercel/analytics@1.3.1(next@14.2.3(react-dom@18.2.0(react@18.2.0))(react@18.2.0)(sass@1.77.2))(react@18.2.0)':
     dependencies:
@@ -2646,6 +2735,8 @@ snapshots:
   async-retry@1.3.3:
     dependencies:
       retry: 0.13.1
+
+  asynckit@0.4.0: {}
 
   before-after-hook@3.0.2: {}
 
@@ -2702,6 +2793,10 @@ snapshots:
 
   colorette@2.0.20: {}
 
+  combined-stream@1.0.8:
+    dependencies:
+      delayed-stream: 1.0.0
+
   commander@12.1.0: {}
 
   cross-spawn@7.0.3:
@@ -2715,6 +2810,8 @@ snapshots:
   debug@4.3.4:
     dependencies:
       ms: 2.1.2
+
+  delayed-stream@1.0.0: {}
 
   detect-libc@1.0.3: {}
 
@@ -2765,6 +2862,12 @@ snapshots:
   fill-range@7.1.1:
     dependencies:
       to-regex-range: 5.0.1
+
+  form-data@2.5.1:
+    dependencies:
+      asynckit: 0.4.0
+      combined-stream: 1.0.8
+      mime-types: 2.1.35
 
   fsevents@2.3.3:
     optional: true
@@ -2916,6 +3019,12 @@ snapshots:
     dependencies:
       braces: 3.0.3
       picomatch: 2.3.1
+
+  mime-db@1.52.0: {}
+
+  mime-types@2.1.35:
+    dependencies:
+      mime-db: 1.52.0
 
   mimic-fn@2.1.0: {}
 

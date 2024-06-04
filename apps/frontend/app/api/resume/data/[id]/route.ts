@@ -1,5 +1,5 @@
 import cors from '@/api/cors'
-import getDatabase from '@/lib/postgres/getDatabase'
+import database from '@/lib/postgres/database'
 import { NextRequest, NextResponse } from 'next/server'
 
 interface Params {
@@ -8,8 +8,7 @@ interface Params {
 
 export async function GET(req: NextRequest, { params }: { params: Params }) {
   const id = parseInt(params.id, 10)
-  const db = await getDatabase()
-  const result = await db
+  const result = await database
     .selectFrom('linkedin_profile')
     .selectAll()
     .where('id', '=', id)
