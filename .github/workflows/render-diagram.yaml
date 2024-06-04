@@ -1,0 +1,17 @@
+name: render-md-mermaid
+
+on:
+  push:
+    paths:
+      - '**.md'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: nielsvaneck/render-md-mermaid@v2
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          file_pattern: '*[.svg,.png]'
+          commit_message: '[ GitHub Actions ] rendered mermaid diagrams'
