@@ -1,4 +1,5 @@
 <details>
+<summary>diagram source</summary>
 
 ```mermaid
 sequenceDiagram
@@ -20,5 +21,4 @@ NOTE OVER github_actions: Action generates LaTeX from the data <br/> & compiles 
 postgres ->> blob: Upload artifact (PDF)
 NOTE OVER blob: Stored PDF files will be accessed <br/> from my website, etc.
 ```
-
 </details>
