@@ -2,7 +2,7 @@
 
 > everything about me
 
-![system design](assets/diagram.svg)]
+![rendered image description](relative/path/to/rendered_image. svg or png )
 
 <details>
 <summary>diagram source</summary>
