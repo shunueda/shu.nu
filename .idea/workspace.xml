@@ -4,26 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/frontend/lib/blobs/getBlobs.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/shared/src/util.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/prettier.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/actions/src/generateLatex.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/actions/src/generateLatex.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/build/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/api/resume/build/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/data/[id]/route.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/api/resume/data/[id]/route.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/app/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/app/resume/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/components/nav.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/components/nav.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/blobs/getResumes.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/postgres/getDatabase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/lib/postgres/database.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/shared/src/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/shared/src/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/assets/diagram.drawio" beforeDir="false" afterPath="$PROJECT_DIR$/assets/diagram.drawio" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-    </list>
+    <list default="true" id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
