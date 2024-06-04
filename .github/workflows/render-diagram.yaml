@@ -14,4 +14,4 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@v4
         with:
           file_pattern: '*[.svg,.png]'
-          commit_message: '[ GitHub Actions ] rendered mermaid diagrams'
+          commit_message: '[GitHub Actions] rendered mermaid diagrams'
