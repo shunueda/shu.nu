@@ -1,3 +1,9 @@
+# shu-nu
+
+> everything about me
+
+![system design](assets/diagram.svg)]
+
 <details>
 <summary>diagram source</summary>
 

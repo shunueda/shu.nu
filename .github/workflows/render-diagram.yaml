@@ -1,6 +1,9 @@
 name: render-md-mermaid
 
-on: push
+on:
+  push:
+    paths:
+      - '**.md'
 
 jobs:
   build:
