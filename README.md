@@ -1,4 +1,5 @@
 <details>
+
 ```mermaid
 sequenceDiagram
     participant chrome_extension as Chrome Extension
@@ -19,4 +20,5 @@ NOTE OVER github_actions: Action generates LaTeX from the data <br/> & compiles 
 postgres ->> blob: Upload artifact (PDF)
 NOTE OVER blob: Stored PDF files will be accessed <br/> from my website, etc.
 ```
+
 </details>
