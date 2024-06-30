@@ -4,9 +4,90 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="">
+    <list default="true" id="c944c8b8-2b74-49db-9b8c-8dc3c8ebbab8" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/assets/template.tex" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bun.lockb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/env.d.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/common/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/resume/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/resume/package.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/resume/src/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/resume/tsconfig.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/resume-build.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/971285a5-7942-4100-a130-4e41eb614499.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/971285a5-7942-4100-a130-4e41eb614499/storage_v2/_src_/database/verceldb.hSjLiA.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/971285a5-7942-4100-a130-4e41eb614499/storage_v2/_src_/database/verceldb.hSjLiA/schema/public.abK9xQ.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/easycode/codebase-v2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsonSchemas.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/prettier.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shu-nu.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/sqldialects.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/website/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/apps/website/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/dependabot.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/linters/.eslintrc.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/linters/.markdown-lint.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/linters/.yaml-lint.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/linters/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/workflows/check-dist.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/workflows/ci.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/workflows/codeql-analysis.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.github/workflows/linter.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/action.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/src/generateLatex.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/actions/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/service-worker.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/src/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/extension/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/cors.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/build/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/data/[id]/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/api/resume/upload/route.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/global.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/layout.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/not-found.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/components/ArrowIcon.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/components/RoughNotation.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/components/footer.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/components/nav.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/cx.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/postgres/getDatabase.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/postgres/reset_seq.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/lib/postgres/withTimestamp.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/next.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/postcss.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/frontend/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/db/database.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/models/LinkedInProfile.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/shared/src/models/legacy.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/website/app/manifest.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/website/app/page.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/website/app/robots.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-workspace.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,76 +105,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PackageJsonUpdateNotifier">
-    <dismissed value="$PROJECT_DIR$/apps/website/package.json" />
-    <dismissed value="$PROJECT_DIR$/package.json" />
+    <dismissed value="$PROJECT_DIR$/packages/resume/package.json" />
   </component>
-  <component name="ProjectCodeStyleSettingsMigration">
-    <option name="version" value="2" />
-  </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="2gIjy1ZK4HBTN2Bpds2i16Tvm62" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="2iXZqWoSDntmrcZsHEO63NDEhWT" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "deno.use.library": "true",
+    "git-widget-placeholder": "preview",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "/Users/me/dev/shunueda/shu-nu/apps/website",
+    "last_opened_file_path": "/Users/me/dev/shunueda/shu-nu/packages/common",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "/Users/me/dev/shunueda/shu-nu/node_modules/prettier",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "/Users/me/dev/shunueda/shu-nu/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/website" />
-      <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/website/public" />
-      <recent name="$PROJECT_DIR$/apps/resume" />
-      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages/common" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/apps/website/app" />
-      <recent name="$PROJECT_DIR$/apps/website/src/lib" />
-      <recent name="$PROJECT_DIR$/apps/website/src" />
-      <recent name="$PROJECT_DIR$/apps/shared/src" />
-      <recent name="$PROJECT_DIR$/apps/resume/src" />
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/packages/resume" />
+      <recent name="$PROJECT_DIR$/packages/resume/src" />
+      <recent name="$PROJECT_DIR$/assets" />
     </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.15989.150" />
-        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-IU-241.15989.150" />
+        <option value="bundled-jdk-9f38398b9061-39b83d9b5494-intellij.indexing.shared.core-IU-241.17011.79" />
+        <option value="bundled-js-predefined-1d06a55b98c1-0b3e54e931b4-JavaScript-IU-241.17011.79" />
       </set>
     </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="8644d502-d0f1-491e-82fb-f6872ffbb99e" name="Changes" comment="" />
-      <created>1715392236974</created>
+      <changelist id="c944c8b8-2b74-49db-9b8c-8dc3c8ebbab8" name="Changes" comment="" />
+      <created>1719639073546</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1715392236974</updated>
-      <workItem from="1715392238091" duration="35513000" />
-      <workItem from="1715616293584" duration="6635000" />
-      <workItem from="1716519703244" duration="2909000" />
+      <updated>1719639073546</updated>
+      <workItem from="1719639074641" duration="5381000" />
     </task>
     <servers />
   </component>

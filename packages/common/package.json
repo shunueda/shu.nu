@@ -1,0 +1,7 @@
+{
+  "name": "common",
+  "module": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
